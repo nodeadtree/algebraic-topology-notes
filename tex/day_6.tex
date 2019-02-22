@@ -1,0 +1,75 @@
+\subsection{Day 6}
+    \begin{enumerate}
+        \item \underline{Goal:} Prove that $\pi_{1}(S^1, x)\cong \Z$
+        \item \underline{Idea:} $S^1$ can be built by ``wrapping $\R$ around itself''.\\:
+            %include spirally drawing of Real numbers mapping to S^1%
+            Concretely, this is
+            \begin{align*}
+                p&: \R \rightarrow S^1\\
+                p(x)&=(\cos(2\pi x), \sin(2\pi x))\\
+            \end{align*}
+            We'll try to ``unwrap'' loops in $S^1$ to get paths in $\R$
+        \item
+            The above map $p$ is an example of a ``covering map''. The ultimate goal of today is to understand
+            what it means to be a covering map, before we get to the definition of it.\\
+        \item \underline{Questions:} Let the following be so,
+            \begin{align*}
+                u_1&=\{(x,y)\in S^1| y>0\}\\
+                u_2&=\{(x,y)\in S^1| x>0,\ y<0\}\\
+            \end{align*}
+            Include the drawings from class, really get sick wit it.
+        \item \underline{Observation:} For any particular $n\in \Z$, the piece,
+            \begin{align*}
+                (n, n+\frac{1}{2})\cong u_1\\
+            \end{align*}
+            The homeomorphism in Dr. Clader's mind is,
+            \begin{align*}
+                \phi&: (n,n+\frac{1}{2})\rightarrow u_1\\
+                \phi(x)&=(\cos(2\pi x), \sin(2\pi x))\\
+                \text{i.e. } \phi&=p_{|(n,n+\frac{1}{2})}\\
+            \end{align*}
+            The inverse of $\phi$ is,
+            \begin{align*}
+                \phi^{-1}: u_1&\rightarrow(n,n+\frac{1}{2})\\
+                \phi^{-1}&=\frac{\cos^{-1} (x)}{2\pi}+n\\
+                (\text{Recall: by }&\text{definition}\ \cos^{-1}(x)\in[0,\pi])\\
+            \end{align*}
+            Similarly, for $u_2$ for any particular $n\in \Z$, $(n-\frac{1}{4}, n)\cong u_2$.
+        \item \underline{Definition:} Let $p:E \rightarrow B$ be a function between two topological spaces. We say
+            $p$ is a \underline{covering map} if $p$ is,
+            \begin{enumerate}
+                \item $p$ is continuous and surjective
+                \item $\forall b\in B$ there exists a neighborhood $u$ of b such that,
+                    \begin{align*}
+                        p^{-1}(u)=\cup_{\alpha}v_{\alpha}\\
+                    \end{align*}
+                    where $v_\alpha\subseteq E$ are open, disjoint and,
+                    \begin{align*}
+                        p_{|v_{\alpha}}:v_{\alpha}\rightarrow u\\
+                    \end{align*}
+                    is a homeomorphism for every $\alpha$. Note that these open subsets with this property are called
+                    \underline{evenly covered}\\
+                    %see the classroom drawing, think about pancakes%
+                    Note that $b$ is one particular point or neighborhood, but there should be a neighborhood for every single
+                    point in $B$ where all of this junk holds reasonably truish.
+            \end{enumerate}
+        \item \underline{Ex:}
+            \begin{align*}
+                p: \R \rightarrow S^1\\
+                p(x)=(\cos(2\pi x), \sin(2\pi x))\\
+            \end{align*}
+            $p$ is a covering map. We just showed that $u_1$ is evenly covered:
+            \begin{align*}
+                p^{-1}(u_1)=\cup_{n\in \Z}(n,n+\frac{1}{2})\\
+            \end{align*}
+            Note that in this case the $(n, n+\frac{1}{2})$ are the $v_\alpha$ from the definition of
+            covering maps. $u_2$ is also evenly covered, but, $U=S^{1}$ is not evenly covered because,
+            $p^{-1}(S^{1})=\R$, and the only way to write $\R$ as a uniion of disjoint open sets $v_\alpha$,
+            is to take $v_\alpha=\R$, but $\R \ncong S^1$
+        \item \underline{Ex:}
+            \begin{align*}
+                B=\text{any space}\\
+                E=B\times \{1,2,...,n\}=\text{n discrete copies of $B$}\\
+            \end{align*}
+            Where $\{1,2,...,n\}$ is equipped with the discrete topology.
+    \end{enumerate}

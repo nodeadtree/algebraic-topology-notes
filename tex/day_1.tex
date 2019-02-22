@@ -1,0 +1,54 @@
+\subsection{Day 1}
+    \begin{enumerate}
+        \item \underline{The idea of algebraic topology}
+        \item Given topological spaces $X$ and $Y$, how can we prove that $X$ and $Y$ are or aren't homeomorphic.
+        \item To prove $X\cong Y$, we simply exhibit a homeomorphism.\\
+            E.g. $(-1,1) \cong \R$, using $f(x) = \frac{x}{1-x^2}$\\
+            E.g. $\square \cong \circ$
+        \item To prove $X\ncong Y$, we'd find a topological invariant, (connected, compact, Hausdorff,\ldots), that only one has.\\
+            E.g. $(0,1) \ncong [0,1]$, here, the closed interval is compact, and the open interval is not.\\
+            E.g. $(0,1) \ncong [0,1)$, because,\\
+            \begin{align*}
+                [0,1)\setminus \{0\} = (0,1) \text{ which is connected, but}\\
+                (0,1)\setminus \{\text{any point}\} \text{ is disconnected}\\
+            \end{align*}
+            Note, with the following exercise, If $X\cong Y$ via a homeomorphism, $\psi : X\rightarrow Y$,
+            then $X\setminus\{p\}\cong Y\setminus \{\psi(p)\}$
+        \item Show the following. \\
+            \begin{align*}
+                \R \ncong \R^2\\
+            \end{align*}
+            Here, we note that $\R \setminus \{0\}$ is disconnected.\\
+            Suppose towards contradiction that $\R \cong\R^2$, call the homeomorphism $\phi:\R\rightarrow \R^2$, because
+            $\R\setminus \{0\}$, the excercise implies that $\R\setminus \{0\}\cong \R^2\{\phi(0)\}$, and therefore
+            $\R^2\setminus\{\phi(0)\}$ is disconnected, but that's just wrong, because $\R^2$ without a single point
+            is still connected, rigorously showing this should be done through working with path connectedness. Therefore
+            these are not homeomorphic.
+            \begin{align*}
+                \R^2 \ncong \R^3\\
+            \end{align*}
+            This was a trick question, we don't actually have any topological properties that we can rely on. If we were
+            to attempt to remove a line from $\R^2$, we don't have enough information about what the line is homeomorphic to
+            in $\R^3$, which is the major stumbling block.
+        \item\underline{The Fundamental Group}
+        \item The fundamental group is a waay to associate a topological space $X$ to a group $\pi_1(X)$ so that
+            $X\cong Y \Rightarrow \pi_1(X)\cong\pi_2(Y)$. 
+        \item We'll be able to use this to prove spaces aren't homeomorphic.\\
+            \underline{Ex:} In this course we'l learn the following.
+            \begin{align*}
+                \pi_1(\R^2\setminus\{(0,0)\})=\Z\\
+                \pi_2(\R^3\setminus\{\text{any point}\})=\{1\}\\
+                \pi_1(\R^2\setminus\{(0,0)\})\ncong \pi_2(\R^3\setminus\{\text{any point}\})\\
+                \R^2\ncong\R^3\\
+            \end{align*}
+            Using this, we can show that these things are not homeomorphic, which is why we do algebraic topology.
+            More powerful tools allow for more results.
+        \item Note: It's not true that $\pi_1(X)\cong \pi_2(Y)\Rightarrow X\cong Y$\\
+            More generally, algebraic topology is about associating the topological space $X$ 
+            with the algebraic object $A(X)$, in such a way that $X\cong Y \Rightarrow A(X)\cong A(Y)$\\
+            There's a spectrum though.
+            \begin{enumerate}
+                \item Easy to compute and says nothing, $A(x)$ is the same for all of $X$
+                \item Hard to compute, but says everything, $A(X)\cong A(Y) \iff X\cong Y$
+            \end{enumerate}
+    \end{enumerate}

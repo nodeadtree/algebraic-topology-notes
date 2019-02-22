@@ -1,0 +1,541 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.18)  22 FEB 2019 13:25
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**notes.tex
+(./notes.tex
+LaTeX2e <2018-12-01>
+(/usr/share/texmf-dist/tex/latex/amscls/amsart.cls
+Document Class: amsart 2017/10/31 v2.20.4
+\linespacing=\dimen102
+\normalparindent=\dimen103
+\normaltopskip=\skip41
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip42
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen104
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen105
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count80
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count81
+\leftroot@=\count82
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count83
+\DOTSCASE@=\count84
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count85
+\c@MaxMatrixCols=\count86
+\dotsspace@=\muskip10
+\c@parentequation=\count87
+\dspbrk@lvl=\count88
+\tag@help=\toks15
+\row@=\count89
+\column@=\count90
+\maxfields@=\count91
+\andhelp@=\toks16
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks17
+\multlinegap=\skip43
+\multlinetaggap=\skip44
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 398.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+\copyins=\insert199
+\abstractbox=\box29
+\listisep=\skip45
+\c@part=\count92
+\c@section=\count93
+\c@subsection=\count94
+\c@subsubsection=\count95
+\c@paragraph=\count96
+\c@subparagraph=\count97
+\c@figure=\count98
+\c@table=\count99
+\abovecaptionskip=\skip46
+\belowcaptionskip=\skip47
+\captionindent=\dimen113
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip48
+\thm@postskip=\skip49
+\thm@headsep=\skip50
+\dth@everypar=\toks24
+)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+\lst@mode=\count100
+\lst@gtempboxa=\box30
+\lst@token=\toks26
+\lst@length=\count101
+\lst@currlwidth=\dimen114
+\lst@column=\count102
+\lst@pos=\count103
+\lst@lostspace=\dimen115
+\lst@width=\dimen116
+\lst@newlines=\count104
+\lst@lineno=\count105
+\lst@maxwidth=\dimen117
+
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+\c@lstnumber=\count106
+\lst@skipnumbers=\count107
+\lst@framebox=\box31
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2018/09/02 1.7 listings configuration
+))
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
+
+(/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/02/04 v3.8 Customized lists
+\labelindent=\skip51
+\enit@outerparindent=\dimen118
+\enit@toks=\toks27
+\enit@inbox=\box32
+\enit@count@id=\count108
+\enitdp@description=\count109
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen119
+\Gin@req@width=\dimen120
+)
+(/usr/share/texmf-dist/tex/latex/faktor/faktor.sty
+Package: faktor 2006/04/05 v0.1b Faktor-Ringe, -Gruppen, -Raeume (PE)
+\faktor@zaehlerhoehe=\skip52
+\faktor@nennerhoehe=\skip53
+)
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks28
+\inpenc@posthook=\toks29
+)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/11/13 3.27 The Babel package
+
+(/usr/share/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/11/13 3.27 Babel switching mechanism
+)
+(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/11/13 3.27 Babel common definitions
+\babel@savecnt=\count110
+\U@D=\dimen121
+
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count111
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip54
+\f@nch@O@elh=\skip55
+\f@nch@O@erh=\skip56
+\f@nch@O@olh=\skip57
+\f@nch@O@orh=\skip58
+\f@nch@O@elf=\skip59
+\f@nch@O@erf=\skip60
+\f@nch@O@olf=\skip61
+\f@nch@O@orf=\skip62
+)
+\c@theorem=\count112
+\c@definition=\count113
+\c@example=\count114
+ (./notes.aux)
+\openout1 = `notes.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Try loading font information for U+msa on input line 68.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 68.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+\c@lstlisting=\count115
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count116
+\scratchdimen=\dimen122
+\scratchbox=\box33
+\nofMPsegments=\count117
+\nofMParguments=\count118
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count119
+\MPscratchDim=\dimen123
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
+\everyMPtoPDFconversion=\toks31
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+(./tex/syllabus.tex
+Underfull \hbox (badness 10000) in paragraph at lines 74--1
+
+ []
+
+) (./tex/day_1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./tex/day_2.tex
+<images/homotopy_class_2.png, id=17, 242.8272pt x 235.6002pt>
+File: images/homotopy_class_2.png Graphic file (type png)
+<use images/homotopy_class_2.png>
+Package pdftex.def Info: images/homotopy_class_2.png  used on input line 27.
+(pdftex.def)             Requested size: 242.8266pt x 235.59961pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--30
+
+ []
+
+
+Underfull \vbox (badness 2717) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (8.0pt): 
+Make it at least 22.09996pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
+
+
+Package Fancyhdr Warning: \footskip is too small (12.0pt): 
+Make it at least 13.0pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
+
+[2]
+<images/homotopy_class.png, id=22, 245.718pt x 224.037pt>
+File: images/homotopy_class.png Graphic file (type png)
+<use images/homotopy_class.png>
+Package pdftex.def Info: images/homotopy_class.png  used on input line 53.
+(pdftex.def)             Requested size: 245.71739pt x 224.03644pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--59
+
+ []
+
+
+Underfull \vbox (badness 6792) has occurred while \output is active []
+
+ [3 <./images/homotopy_class_2.png>] [4 <./images/homotopy_class.png>]) (./tex/
+day_3.tex
+<images/concatenation.png, id=31, 573.8238pt x 225.4824pt>
+File: images/concatenation.png Graphic file (type png)
+<use images/concatenation.png>
+Package pdftex.def Info: images/concatenation.png  used on input line 26.
+(pdftex.def)             Requested size: 433.28828pt x 170.26053pt.
+
+[5 <./images/concatenation.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+[6]
+<images/gluing_lemma_2.png, id=40, 237.7683pt x 102.6234pt>
+File: images/gluing_lemma_2.png Graphic file (type png)
+<use images/gluing_lemma_2.png>
+Package pdftex.def Info: images/gluing_lemma_2.png  used on input line 47.
+(pdftex.def)             Requested size: 237.7677pt x 102.62314pt.
+<images/gluing_lemma.png, id=41, 361.35pt x 132.2541pt>
+File: images/gluing_lemma.png Graphic file (type png)
+<use images/gluing_lemma.png>
+Package pdftex.def Info: images/gluing_lemma.png  used on input line 58.
+(pdftex.def)             Requested size: 361.34912pt x 132.25377pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--62
+
+ []
+
+[7 <./images/gluing_lemma_2.png> <./images/gluing_lemma.png>]
+<images/homotopy_class_concat.png, id=48, 407.6028pt x 215.3646pt>
+File: images/homotopy_class_concat.png Graphic file (type png)
+<use images/homotopy_class_concat.png>
+Package pdftex.def Info: images/homotopy_class_concat.png  used on input line 1
+09.
+(pdftex.def)             Requested size: 433.28828pt x 228.93932pt.
+<images/homotopy_class_concat_2.png, id=49, 336.7782pt x 186.4566pt>
+File: images/homotopy_class_concat_2.png Graphic file (type png)
+<use images/homotopy_class_concat_2.png>
+Package pdftex.def Info: images/homotopy_class_concat_2.png  used on input line
+ 114.
+(pdftex.def)             Requested size: 433.28828pt x 239.90694pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+[9 <./images/homotopy_class_concat.png> <./images/homotopy_class_concat_2.png>]
+) (./tex/day_4.tex
+<images/association.png, id=58, 320.1561pt x 171.2799pt>
+File: images/association.png Graphic file (type png)
+<use images/association.png>
+Package pdftex.def Info: images/association.png  used on input line 24.
+(pdftex.def)             Requested size: 320.1553pt x 171.27948pt.
+<images/association_2.png, id=59, 310.0383pt x 181.3977pt>
+File: images/association_2.png Graphic file (type png)
+<use images/association_2.png>
+Package pdftex.def Info: images/association_2.png  used on input line 29.
+(pdftex.def)             Requested size: 310.03754pt x 181.39725pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+<images/path_identity.png, id=63, 179.9523pt x 133.6995pt>
+File: images/path_identity.png Graphic file (type png)
+<use images/path_identity.png>
+Package pdftex.def Info: images/path_identity.png  used on input line 43.
+(pdftex.def)             Requested size: 179.95184pt x 133.69916pt.
+
+Underfull \vbox (badness 4859) has occurred while \output is active []
+
+ [11 <./images/association.png> <./images/association_2.png> <./images/path_ide
+ntity.png>]
+<images/path_inverse.png, id=70, 179.2296pt x 114.1866pt>
+File: images/path_inverse.png Graphic file (type png)
+<use images/path_inverse.png>
+Package pdftex.def Info: images/path_inverse.png  used on input line 60.
+(pdftex.def)             Requested size: 179.22914pt x 114.18631pt.
+<images/loops.png, id=71, 155.3805pt x 97.5645pt>
+File: images/loops.png Graphic file (type png)
+<use images/loops.png>
+Package pdftex.def Info: images/loops.png  used on input line 82.
+(pdftex.def)             Requested size: 155.3801pt x 97.56424pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--93
+
+ []
+
+[12 <./images/path_inverse.png> <./images/loops.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--107
+
+ []
+
+) (./tex/day_5.tex) (./tex/day_6.tex [13]
+Underfull \hbox (badness 10000) in paragraph at lines 13--15
+
+ []
+
+[14]) (./tex/day_7.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[15]) (./tex/day_8.tex) (./tex/day_9.tex) (./tex/day_10.tex [16]
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+
+ []
+
+[18]) (./tex/day_11.tex
+Overfull \hbox (12.54428pt too wide) in paragraph at lines 7--9
+[]$[]$ \OT1/cmr/m/n/10.95 Let $\OML/cmm/m/it/10.95 ' \OT1/cmr/m/n/10.95 : \OML/
+cmm/m/it/10.95 X \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 Y$\OT1/cmr/m/n/10.95
+ , be a con-tin-u-ous map, then the $[]$
+ []
+
+[19] [20]) (./tex/day_12.tex
+Overfull \hbox (18.04237pt too wide) in paragraph at lines 23--26
+[]$[]$ \OT1/cmr/m/n/10.95 If there ex-ists a ho-mo-topy from $\OML/cmm/m/it/10.
+95 f$ \OT1/cmr/m/n/10.95 to $\OML/cmm/m/it/10.95 g$\OT1/cmr/m/n/10.95 , we'll s
+ay that $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--26
+
+ []
+
+[21]) [22] (./notes.aux) ) 
+Here is how much of TeX's memory you used:
+ 5279 strings out of 492616
+ 70635 string characters out of 6135177
+ 157183 words of memory out of 5000000
+ 8902 multiletter control sequences out of 15000+600000
+ 12346 words of font info for 47 fonts, out of 8000000 for 9000
+ 1302 hyphenation exceptions out of 8191
+ 41i,19n,43p,272b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on notes.pdf (22 pages, 405697 bytes).
+PDF statistics:
+ 160 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+

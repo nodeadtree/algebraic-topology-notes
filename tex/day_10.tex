@@ -1,0 +1,108 @@
+\subsection{Day 10}
+    \begin{enumerate}
+        \item \underline{$pi_1(S^1)$, continued:}
+        \item \underline{Recap:}
+            \begin{align*}
+                p: \R \rightarrow S^{1}\\
+                p(x)=(\cos(2\pi x), \sin(2\pi x))\\
+            \end{align*}
+            Then there exists a function,
+            \begin{align*}
+                \phi : \pi_1(S^{1}, b)\rightarrow p^{-1}(b)\\
+                \phi([f])=\tilde{f}(1)\\
+            \end{align*}
+            Where $\tilde{f}$ is the lift of $f$ to $\R$ starting at $0$.\\
+            E.g.,(draw that spiraleboye)
+            \begin{align*}
+                \phi([\text{loop once counterclockwise}])=1\\
+                \phi([\text{loop twice counterclockwise}])=2\\
+                \phi([\text{loop once clockwise}])=-1\\
+            \end{align*}
+            The fact that there exists a unique lift, $\tilde{f}$ of any $f$ is a feature
+            of covering maps.\\
+            In fact,
+            \begin{align*}
+                p^{-1}(b)=\Z\\
+            \end{align*}
+            and,\\
+        \item \underline{Claim:} $\phi: \pi_1(S^1, b)\rightarrow \Z$ is a bijection.
+            \begin{proof}
+                \begin{enumerate}
+                    \item \underline{Surjective:} Given $c\in\Z$, choose a path, $\alpha: I \rightarrow \R$, from
+                        $0$ to $c$ in $\R$. Then let, $f: I \rightarrow S^1$ be $f=p\circ \alpha$\\
+                        Then f is a loop in $S^1$ based at $b=(1,0)$ because
+                        \begin{align*}
+                            f(0)=p(\alpha(0))=p(0)=(1,0)\\
+                            f(1)=p(\alpha(1))=p(c)=(1,0)\\
+                        \end{align*}
+                        And, $\tilde{f}=\alpha$ because $p\circ \tilde{f}=p\circ \alpha = f$. Thus,
+                        \begin{align*}
+                            \phi([f])=\tilde{f}(1)=\alpha(1)=c\\
+                        \end{align*}
+                    \item \underline{Injective:} Suppose,
+                        \begin{align*}
+                            \phi([f])=\phi([g])\\
+                            \implies \tilde{f}(1)=\tilde{g}(1)\\
+                        \end{align*}
+                        Then, $\tilde{f}$ and $\tilde{g}$ are two paths in $\R$, that both start at 0
+                        and both end at the same point.\\
+                        $\Rightarrow$ (courtesy of homework 2) $\tilde{f}\cong_{p}\tilde{g}$ (because $\R$ is simply
+                        connected)\\
+                        $\Rightarrow$ $p\circ H$ is a path homotopy from $p\circ \tilde{f}$ to $p\circ \tilde{g}$.\\
+                        $\Rightarrow f\cong_{p}g$\\
+                        $\Rightarrow [f]=[g]\in \pi_1(S^1, b)$\\
+                \end{enumerate}
+            \end{proof}
+        \item \underline{Claim:} $phi$ is a group homomorphism ( thus, an isomorphism ).\\
+            \begin{proof}
+                Let $[f], [g]\in \pi \pi_1(S^1,b)$, we want to show that,
+                $\phi([f]*[g])=\phi([f])+\phi([g])$\\
+                By definition,
+                \begin{align*}
+                    \phi([f]*[g])=\phi([f*g])=\tilde{f*g(1)}\\
+                \end{align*}
+                What is $\tilde{f*g}$? By definition $\tilde{f*g}$ is the lift of $f*g$
+                starting at $0$ and,
+                \begin{align*}
+                    \tilde{f}=\text{lift of $f$ starting at 0 ending at some $n$}\\
+                    \tilde{g}=\text{lift of $g$ starting at 0 ending at some $m$}\\
+                \end{align*}
+                %Note some drawing.
+                So, $\tilde{f}*\tilde{g}$ doesn't make sense, but let:
+                \begin{align*}
+                    \tilde{g}^{'}=\text{``shift $\tilde{g}$ by n ''}\\
+                    \text{i.e.,}\tilde{g}^{'}=g(s)+n\\
+                \end{align*}
+                Sow notice that $\tilde{f}*\tilde{g}^{'}$ now makes sense, and $\tilde{g}^{'}$ is a
+                lift of $g$, because:
+                \begin{align*}
+                    (p\circ\tilde{g}^{'})(s)=p(\tilde{g}(s))\\
+                    =p(\tilde{g}(s)+n)\\
+                    =p(\tilde{g}(s))\\
+                    \text{because $p(x+n)=p(x),\ \forall n\in\Z$ }\\
+                    =(p\circ\tilde{g})(s)\\
+                    =g(s)\\
+                \end{align*}
+                Thus, $\tilde{f}*\tilde{g}^{'}$ is a lift of $f*g$ starting at $0$\\
+                \begin{align*}
+                    \implies \tilde{f}*\tilde{g}=\tilde{f*g}\\
+                    \tilde{f*g}(1)=\tilde{f}*\tilde{g}\\
+                    =\text{endpoint of $\tilde{g}^{'}$}\\
+                    =\tilde{g}(1)+n\\
+                    =m+n\\
+                \end{align*}
+                This shows that
+                \begin{align*}
+                    \phi([f]*[g])=m+n\\
+                    =\tilde{f}(1)+\tilde{g}(1)\\
+                    =\phi([f])+\phi([g])\\
+                \end{align*}
+            \end{proof}
+        \item \underline{We want:}
+            \begin{align*}
+                X\cong Y\implies \pi_1(X,x)\cong\pi_1(Y,y)\\
+                \text{(X is homeomorphic to Y)}\\
+            \end{align*}
+            The big tool we'll use to do that is the tool from the second homework
+            about maps between spaces being homomorphisms. That's for next time!
+    \end{enumerate}

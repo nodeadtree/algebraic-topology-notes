@@ -1,0 +1,82 @@
+\subsection{Day 12}
+    \begin{enumerate}
+        \item \underline{Homotopy of maps:}
+            \underline{Definition:} Let $f: X\rightarrow Y$ be a continuous function.
+            A \underline{homotopy} from $f$ to $g$ is a continuous function,
+            \begin{align*}
+                H:X\times I \rightarrow Y\\
+                \text{such that}\\
+                H(x,0)=f\\
+                H(x,0)=g\\
+            \end{align*}
+            We'll often write,
+            \begin{align*}
+                h_t:X \rightarrow Y\\
+                h_t(x)=H(x,t)\\
+            \end{align*}
+            Then there's one $h_t$ for each $t\in I$ and,
+            \begin{align*}
+                h_0=f\\
+                h_1=g\\
+                h_t=\text{``A function interpolating between $f$ and $g$''}\\
+            \end{align*}
+        \item \underline{Terminology/Notation:} If there exists a homotopy from
+            $f$ to $g$, we'll say that \underline{$f$ is homotopic to $g$} and write
+            $f\cong g$.\\
+        \item \underline{Ex:}
+            \begin{align*}
+                f: S^{1}\rightarrow \R^2\\
+                g: S^{1}\rightarrow \R^2\\
+                f(x,y)=(x,y)\\
+                g(x,y)=(0,0)\\
+            \end{align*}
+            Then $f\cong g$. A homotopy from $f$ to $g$ is,
+            \begin{align*}
+                H: S^{1}\times I \rightarrow \R^2\\
+                H((x,y),t)=((1-t)x,(1-t)y)\\
+            \end{align*}
+            Do the drawing from the board.
+        \item \underline{Ex:}
+            \begin{align*}
+                f:\R \rightarrow \R\\
+                g:\R \rightarrow \R\\
+                f(x)=x\\
+                g(x)=x+2\\
+            \end{align*}
+            Then $f\cong g$. A homotopy from $f$ to $g$ is:
+            \begin{align*}
+                H:\R \times I \rightarrow \R\\
+                H(x,t)=x+2t\\
+            \end{align*}
+            Refer again to the picture from the board.
+        \item \underline{Questions:}
+            \begin{enumerate}
+                \item
+                    \begin{align*}
+                        f: \R \rightarrow \R^2\\
+                        g: \R \rightarrow \R^2\\
+                        f(x)=(x,0)\\
+                        g(x)=(x,e^x)\\
+                    \end{align*}
+                \item
+                    \begin{align*}
+                        f: \R^2\setminus{(0,0)} \rightarrow \R^2\setminus{(0,0)}\\
+                        g: \R^2\setminus{(0,0)} \rightarrow \R^2\setminus{(0,0)}\\
+                        f(x)=(x,y)\\
+                        g(x)=(\frac{x}{\sqrt{x^2+y^2}},\frac{y}{\sqrt{x^2+y^2}})\\
+                    \end{align*}
+                    \begin{align*}
+                        f: \R \rightarrow \R^2\\
+                        g: \R \rightarrow \R^2\\
+                        f(x)=(x,0)\\
+                        g(x)=(x,e^x)\\
+                    \end{align*}
+                    Just use the straight line homotopy it's not hard.
+            \end{enumerate}
+            Maybe include the drawings?
+        \item \underline{Definition:} Let $f:X\rightarrow Y$ and $g: X\rightarrow Y$ be continuous,
+            and let $x_0 \in X$ be such that $f(x_0)=g(x_0)=y_0$. Then a
+            \underline{homotopy from $f$ to $g$ relative to $x_0$} is a homotopy $H:X\times I \rightarrow Y$
+            from $f$ to $g$ such that $h_t(x_0)=y_0,\ \forall t$.\\
+            (``$x_0$ doesn't move during the homotopy'')
+    \end{enumerate}

@@ -1,0 +1,37 @@
+\subsection{Day 5}
+    \begin{enumerate}
+        \item \underline{$\pi_1$ continued:} To what extent does $\pi_1$ depend on $x$?
+        \item \underline{Theorem:} Let $X$ be a path-connected topological space, and let $x_0,x_1\in X$, then
+            $\pi_1(X,x_0)\cong\pi_1(X,x_1)$. This section builds off the worksheet provided in class.
+            \begin{enumerate}
+                \item \underline{Part 1}: see drawing
+                \item \underline{Part 2}: Let $f$ and $g$ be in $\pi_1(X,x_1)$
+                    \begin{align*}
+                        \hat{\alpha}([f]*[g])
+                        &=[\overline{\alpha}] *[f]*[g] *[\alpha]\\
+                        &=[\overline{\alpha}] *[f] *[\alpha] *[\overline{\alpha}] *[g] *[\alpha]\\
+                        &=\hat{\alpha}([f])*\hat{\alpha}([g])\\
+                    \end{align*}
+                \item \underline{Part 3}: Let $f \in \pi_1(X,x_1)$
+                    \begin{align*}
+                        \hat{\alpha}([f])
+                        &=[\overline{\alpha}] *[f] *[\alpha]\\
+                        \hat{\overline{\alpha}}( [\overline{\alpha}] *[f] *[\alpha])
+                        &=[\alpha] *[\overline{\alpha}] *[f] *[\alpha] *[\overline{\alpha}]\\
+                        &=[f]\\
+                    \end{align*}
+                \item Therefore this mfer is an isomorphism.
+            \end{enumerate}
+        \item For which topological spaces $X$ can we actually compute $\pi_1(X,x)$?
+        \item \underline{Definition:} A topological space $X$ is \underline{simply-connected} if
+            \begin{enumerate}
+                \item $X$ is path connected
+                \item $\pi_1(X,x)={1}\ \forall x\in X$\\
+                    (Because $X$ is path connected, we only need to check this for one $x\in X$)
+            \end{enumerate}
+        \item \underline{Ex:} $\R^2$ is simply connected
+        \item \underline{Intuition:} $X$ is simply-connected if any loop in $X$ if any loop in $X$ can
+            be ``shrunk down'' to a constant loop.\\
+            (for all loops $f$ in $X$ saying $f$ can be ``shrunk down'' means $f\cong_{p}c_x$ where $c_x$ is a constant path)
+        \item \underline{Next time:} A convex subset of $\R^n$ is simply connected.
+    \end{enumerate}
