@@ -79,4 +79,28 @@
             \underline{homotopy from $f$ to $g$ relative to $x_0$} is a homotopy $H:X\times I \rightarrow Y$
             from $f$ to $g$ such that $h_t(x_0)=y_0,\ \forall t$.\\
             (``$x_0$ doesn't move during the homotopy'')
+        \item \underline{Ex:} in the second part of the questions from today, $H$ was a homotopy relative to $(1,0)$, or
+            to any other point on the unit circle.
+        \item \underline{Ex:}
+            \begin{align*}
+                X=\{(x,y)\in \R^2 | x^2+y^2\leq 1\}\\
+            \end{align*}
+            (it's the 2 norm ball)
+            \begin{align*}
+                f: X\rightarrow X\\
+                g: X\rightarrow X\\
+            \end{align*}
+            Then,
+            \begin{align*}
+                H: X\times I \rightarrow X\\
+                H((x,y),t)=(1-t)x, (1-t)y)\\
+            \end{align*}
+            is a homotopy relative to $(0,0)$.
+        \item \underline{Theorem:} If $f:X\rightarrow Y$ and $g:X\rightarrow Y$ are
+            homotopic relative to $x_0$, then:
+                \begin{align*}
+                    f_{*}:\pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)\\
+                    g_{*}:\pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)\\
+                \end{align*}
+                are the same homomorphism.
     \end{enumerate}
