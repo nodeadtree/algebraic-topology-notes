@@ -1,0 +1,131 @@
+\subsection{Day 13}
+\begin{enumerate}
+    \item \underline{Theorem:} 
+        Let
+        \begin{align*}
+            f: X\rightarrow Y\\
+            g: X\rightarrow Y\\
+        \end{align*}
+        be a continuous function such that $f(x_0)=g(x_0)=y_0$. Suppose that
+        $f$ and $g$ are \underline{homotopic relative to $x_0$}.\\(there exists a homotopy
+        $H$ from $f$ to $g$ such that $H(x_0, t)=y_0,\ \forall t$).\\
+        Then,
+        \begin{align*}
+            f_*:\pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)\\
+            f_*:\pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)\\
+        \end{align*}
+        are the same homomorphism.
+        \begin{proof}
+            Let $[\alpha]\in \pi_1(X,x_0)$. We want,
+            \begin{align*}
+                f*[\alpha]=g*[\alpha]\\
+                \iff [f\circ \alpha]=[g\circ \alpha]\\
+                \iff f\circ \alpha \cong_{p} g\circ\alpha\\
+            \end{align*}
+            Define,
+            \begin{align*}
+                P: I\times I \rightarrow Y\\
+                P(s,t)=H(\alpha(s), t)\\
+            \end{align*}
+            Equivalently, 
+            \begin{align*}
+                p_t: I \rightarrow Y\\
+                p_t(s)=(h_t\circ \alpha)(s)\\
+            \end{align*}
+            This is a path homotopy from $f\circ \alpha$ to $g\circ\alpha$.
+            Firstly, because $H$ is a homotopy relative to $x_0$.
+            \begin{align*}
+                P(0,t)=H(\alpha(0),t)=H(x_0,t)=y_0\\
+                P(1,t)=H(\alpha(1),t)=H(x_0,t)=y_0\\
+            \end{align*}
+            Because $H$ is a homotopy from $f$ to $g$, the following is true.
+            \begin{align*}
+                P(s,0)=H(\alpha(s),0)=f(\alpha(s))\\
+                P(s,1)=H(\alpha(s),1)=g(\alpha(s))\\
+            \end{align*}
+        \end{proof}
+    \item
+        \underline{Application:} Suppose $A\subseteq X$ and that there exists
+        a homotopy $H$ from
+        \begin{align*}
+            id:X\rightarrow X\\
+        \end{align*}
+        to a continuous function
+        \begin{align*}
+            r: X\rightarrow X\\
+        \end{align*}
+        such that,
+        \begin{enumerate}
+            \item $r(x)\in A,\ \forall x\in X$
+            \item $H(a,t)=a,\ \forall a \in A,\ \forall t\in I$\\
+                (``every point of $A$ stays fixed throughout the homotopy, or,
+                $H$ is a homotopy relative to every point in $A$)
+        \end{enumerate}
+        In this situation, we say that $A$ is a \underline{deformation retract} of $X$
+        or that $H$ is a \underline{deformation retraction} of $X$ onto $A$.
+    \item \underline{Theorem:} If $A$ is a deformation retract of $X$, then,
+        \begin{align*}
+            \pi_1(X,x_0)\cong \pi_1(A,x_0),\ \forall x_0\in A\\
+        \end{align*}
+    \item\underline{Ex:}
+        \begin{align*}
+            X=\R^2\\
+            A=S^1\\
+            r:X\rightarrow X\\
+            r(x,y)=(\frac{x}{\sqrt{x^2+y^2}},\frac{y}{\sqrt{x^2+y^2}})
+        \end{align*}
+        On Friday, we saw that the straight line homotopy, $H:X\times I\rightarrow X$
+        is a homotopy from $id:X\rightarrow X$ to $r:X\rightarrow X$.
+    \item \underline{Ex:}
+        \begin{align*}
+            X=\{(x,y)\in \R^2| x^2+y^2\leq 1\}\\
+            A=\{(0,0)\}\\
+            r: X\rightarrow X\\
+            r(x,y)=(0,0)\\
+        \end{align*}
+        On Friday, we saw that the straight line homotopy $H:X\times I \rightarrow X$ is
+        a homotopy from $id:X\rightarrow X$ to $r:X\rightarrow X$,
+        Thus,
+        \begin{align*}
+            \pi_1(X)\cong_{p}\pi_1(\{.\})=\{1\}\\
+        \end{align*}
+    \item \underline{Question:} Let,
+        \begin{align*}
+            X=\R^3\setminus \{\text{z-axis}\}\\
+            A=\{(x,y,0)| x\neq 0,\ y\neq 0\}\\
+        \end{align*}
+        Find a deformation retraction from $X$ onto $A$. (Specify both $r$ and $H$)\\
+        What does this tell us about $\pi_1(\R^3\{\text{z-axis}\})$
+    \item \underline{Answer:}
+        \begin{align*}
+            r(x,y,z)=(x,y,0)\\
+            H((x,y,z),t)=(x,y, (1-t)z)\\
+        \end{align*}
+        Thus,
+        \begin{align*}
+            \pi_1(\R^3\setminus\{\text{z-axis}\})\cong \pi_1(A)\cong \pi_1(\R^2\setminus\{(0,0)\})\cong \pi_1(S^1)\cong \Z\\
+        \end{align*}
+    \item \begin{proof} Let $x_0\in A$. Let,
+            \begin{align*}
+                i: A\rightarrow X\\
+                i(a)=a\\
+                s: X\rightarrow A\\
+                s(x)=r(x)\\
+            \end{align*}
+            Considering condition 2 in the definition
+            of deformation retraction yields, $s\circ i= id_A$, because
+            \begin{align*}
+                s(i(a))=s(a)=a\\
+            \end{align*}
+            In the other direction,
+            \begin{align*}
+                i\circ s = r\\
+            \end{align*}
+            The deformation retraction $H$ is a homotopy relative to $x_0$ from $r$ to $id_X$, so:
+            \begin{align*}
+                r_*=(id_X)_*\\
+                \implies (i\circ s)_*=(id_X)_*\\
+                \implies i_* \circ s_*=id\\
+            \end{align*}
+    \end{proof}
+\end{enumerate}
