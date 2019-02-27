@@ -1,0 +1,80 @@
+\subsection{Day 14}
+\begin{enumerate}
+    \item Quiz(Midterm) on Monday, whenever that is. Standard Dr. Clader Format. Last
+        covered topic on that will be deformation retractions.
+    \item Recall from last time:
+        \begin{enumerate}
+            \item \underline{Theorem: }
+                \begin{align*}
+                    A\subseteq X\\
+                    x_0 \in A\\
+                    H=\text{ deformation retraction of $X$ onto $A$ }
+                \end{align*}
+                Recall that H is a homotopy relative to $x_0$
+                \begin{align*}
+                    id: X\rightarrow X\\
+                    r: X \rightarrow X\\
+                    s.t. r(x)\in A,\ \forall x\in X\\
+                \end{align*}
+                Then,
+                \begin{align*}
+                    \pi_1(X,x_0)\cong\pi_1(A,x_0)\\
+                \end{align*}
+                ($r$ is a retraction)
+                \begin{proof}
+                    Consider, $X \leftrightharpoons A$, where
+                    $X\rightarrow A$ is $s$, the same function as $r$,
+                    and $A\rightarrow X$ is the inclusion map. Then,
+                    \begin{align*}
+                        s\circ i &= id: A\rightarrow A\\
+                        \implies s_* \circ i_* &= id: \pi_1(A,x_0)\rightarrow\pi_1(A,x_0)\\
+                    \end{align*}
+                    In the other order:
+                    \begin{align*}
+                        i\circ s = r\cong id\\
+                    \end{align*}
+                    Note that $r$ is a homotopy relative to $x_0$, and
+                    that the next step follows from the theorem from the beginning of
+                    last class.
+                    \begin{align*}
+                        \implies i_* \circ s_* = id: \pi_1(X,x_0)\rightarrow\pi_1(X,x_0)\\
+                    \end{align*}
+                    So we have:
+                    \begin{align*}
+                        \pi_1(X,x_0)\leftrightharpoons\pi_1(A,x_0)\\
+                        s_*:\pi_1(X,x_0)\rightarrow\pi_1(A,x_0)\\
+                        i_*:\pi_1(A,x_0)\rightarrow\pi_1(X,x_0)\\
+                    \end{align*}
+                    and we've shown $s_*$ and $i_*$ are inverses, giving
+                    \begin{align*}
+                        \pi_1(X,x_0)\cong\pi_1(A,x_0)\\
+                    \end{align*}
+                \end{proof}
+        \end{enumerate}
+    \item \underline{Fun Font Fabtacular}
+        Letter fundamental groups.
+        \begin{enumerate}
+            \item \textbf{C family:} C,E,F,G,H,I,J,K,L,M,N,S,T,U,V,W,X,Y,Z
+            \item \textbf{A family:} A,D,O,P,Q,R
+            \item \textbf{B family:} B (fuckin loser.)
+        \end{enumerate}
+        The reason $\pi_1(E)\cong\pi_1(I)$ is that there
+        is a deformation retraction.
+        \begin{align*}
+            H: E\times I \rightarrow E\\
+            H(x,0)=x\\
+            H(x,1)\in I, \text{ the letter ``I'' }\\
+        \end{align*}
+        The rest of this was erased, before I could write it down. Ahh damn.\\
+        Let's talk about $\pi_1(B)$ though. What is that?
+        \begin{enumerate}
+            \item It's the same as the fundamental group of a figure 8, because $B\cong \infty$
+            \item It's also the same as:
+                \begin{align*}
+                    \pi_1(\R^2\setminus \{p,q\})\\
+                \end{align*}
+                where $p$ and $q$ are unequal points in $\R^2$.
+            \item Also the same as $\pi_1(\theta)$ (theta is just the letter theta)
+                
+        \end{enumerate}
+\end{enumerate}
