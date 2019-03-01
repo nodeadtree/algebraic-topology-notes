@@ -1,6 +1,6 @@
-\subsection{Day 4}
+\section{Day 4}
+    \subsubsection{Definition of Fundamental Group}
     \begin{enumerate}
-        \item\underline{Definition of Fundamental Group}
         \item \underline{Recall:} If,
             \begin{align*}
                 f=\text{path in $X$ from x to y}\\
@@ -71,12 +71,13 @@
                         X&=\text{topological space}\\
                         x&\in X\\
                     \end{align*}
-                    \underline{Definition:} A \underline{loop} in $X$ based at $x\in X$ is a path,
+                    \begin{definition} A \underline{loop} in $X$ based at $x\in X$ is a path,
                     \begin{align*}
                         f:I&\rightarrow X\\
                         \text{such that}
                         &f(0)=f(1)\\
-                    \end{align*}\\
+                    \end{align*}
+                    \end{definition}
             \begin{minipage}[c]{\linewidth}
                 \begin{center}
                 \includegraphics[]{images/loops.png}
@@ -84,11 +85,14 @@
             \end{minipage}
                 \item \underline{Observation:} If $f$ and $g$ are any two loops in $X$ based at $x$,
                     then $f*g$ is a loop.
-                \item \underline{Definition:} The \underline{fundamental group} of the $X$ with basepoint $x$ is:
-                    \begin{align*}
-                        \pi(X,x)=\{\text{path-homotopy classes of loops in $X$ based at $x$}\}\\
-                    \end{align*}
-                    This is a group with the operation $*$\\
+                \item 
+                    \begin{definition}
+                        The \underline{fundamental group} of the $X$ with basepoint $x$ is:
+                        \begin{align*}
+                            \pi(X,x)=\{\text{path-homotopy classes of loops in $X$ based at $x$}\}\\
+                        \end{align*}
+                        This is a group with the operation $*$\\
+                    \end{definition}
                     \begin{enumerate}
                         \item $e_x$ and $e_y$ are loops.
                         \item $f*\overline{f}$ and $\overline{f}*f$ are also loops.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.18)  27 FEB 2019 14:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.18)  1 MAR 2019 13:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -306,27 +306,30 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-(./tex/syllabus.tex
-Underfull \hbox (badness 10000) in paragraph at lines 7--1
+(./tex/day_1.tex
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 5.
+LaTeX Font Info:    No file OMScmss.fd. on input line 5.
 
- []
 
-) (./tex/day_1.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 5.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 11.
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 11.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 8--11
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
@@ -340,7 +343,7 @@ This may cause the page layout to be inconsistent, however.
 
 ]) (./tex/day_2.tex
 [2]
-<images/homotopy_class_2.png, id=22, 242.8272pt x 235.6002pt>
+<images/homotopy_class_2.png, id=21, 242.8272pt x 235.6002pt>
 File: images/homotopy_class_2.png Graphic file (type png)
 <use images/homotopy_class_2.png>
 Package pdftex.def Info: images/homotopy_class_2.png  used on input line 27.
@@ -350,7 +353,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--30
 
  []
 
-<images/homotopy_class.png, id=24, 245.718pt x 224.037pt>
+<images/homotopy_class.png, id=23, 245.718pt x 224.037pt>
 File: images/homotopy_class.png Graphic file (type png)
 <use images/homotopy_class.png>
 Package pdftex.def Info: images/homotopy_class.png  used on input line 53.
@@ -362,7 +365,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--59
 
 [3 <./images/homotopy_class_2.png>] [4 <./images/homotopy_class.png>])
 (./tex/day_3.tex
-<images/concatenation.png, id=33, 573.8238pt x 225.4824pt>
+<images/concatenation.png, id=32, 573.8238pt x 225.4824pt>
 File: images/concatenation.png Graphic file (type png)
 <use images/concatenation.png>
 Package pdftex.def Info: images/concatenation.png  used on input line 26.
@@ -373,12 +376,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
  []
 
 [6 <./images/concatenation.png>]
-<images/gluing_lemma_2.png, id=42, 237.7683pt x 102.6234pt>
+<images/gluing_lemma_2.png, id=41, 237.7683pt x 102.6234pt>
 File: images/gluing_lemma_2.png Graphic file (type png)
 <use images/gluing_lemma_2.png>
 Package pdftex.def Info: images/gluing_lemma_2.png  used on input line 47.
 (pdftex.def)             Requested size: 237.7677pt x 102.62314pt.
-<images/gluing_lemma.png, id=43, 361.35pt x 132.2541pt>
+<images/gluing_lemma.png, id=42, 361.35pt x 132.2541pt>
 File: images/gluing_lemma.png Graphic file (type png)
 <use images/gluing_lemma.png>
 Package pdftex.def Info: images/gluing_lemma.png  used on input line 58.
@@ -389,13 +392,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--62
  []
 
 [7 <./images/gluing_lemma_2.png> <./images/gluing_lemma.png>]
-<images/homotopy_class_concat.png, id=50, 407.6028pt x 215.3646pt>
+<images/homotopy_class_concat.png, id=49, 407.6028pt x 215.3646pt>
 File: images/homotopy_class_concat.png Graphic file (type png)
 <use images/homotopy_class_concat.png>
 Package pdftex.def Info: images/homotopy_class_concat.png  used on input line 1
 09.
 (pdftex.def)             Requested size: 442.37993pt x 233.74374pt.
-<images/homotopy_class_concat_2.png, id=51, 336.7782pt x 186.4566pt>
+<images/homotopy_class_concat_2.png, id=50, 336.7782pt x 186.4566pt>
 File: images/homotopy_class_concat_2.png Graphic file (type png)
 <use images/homotopy_class_concat_2.png>
 Package pdftex.def Info: images/homotopy_class_concat_2.png  used on input line
@@ -403,22 +406,22 @@ Package pdftex.def Info: images/homotopy_class_concat_2.png  used on input line
 (pdftex.def)             Requested size: 442.37993pt x 244.93991pt.
  [8 <./images/homotopy_class_concat.png>]) (./tex/day_4.tex [9 <./images/homoto
 py_class_concat_2.png>]
-<images/association.png, id=60, 320.1561pt x 171.2799pt>
+<images/association.png, id=59, 320.1561pt x 171.2799pt>
 File: images/association.png Graphic file (type png)
 <use images/association.png>
 Package pdftex.def Info: images/association.png  used on input line 24.
 (pdftex.def)             Requested size: 320.1553pt x 171.27948pt.
-<images/association_2.png, id=61, 310.0383pt x 181.3977pt>
+<images/association_2.png, id=60, 310.0383pt x 181.3977pt>
 File: images/association_2.png Graphic file (type png)
 <use images/association_2.png>
 Package pdftex.def Info: images/association_2.png  used on input line 29.
 (pdftex.def)             Requested size: 310.03754pt x 181.39725pt.
-<images/path_identity.png, id=62, 179.9523pt x 133.6995pt>
+ [10 <./images/association.png> <./images/association_2.png>]
+<images/path_identity.png, id=67, 179.9523pt x 133.6995pt>
 File: images/path_identity.png Graphic file (type png)
 <use images/path_identity.png>
 Package pdftex.def Info: images/path_identity.png  used on input line 43.
 (pdftex.def)             Requested size: 179.95184pt x 133.69916pt.
- [10 <./images/association.png> <./images/association_2.png>]
 <images/path_inverse.png, id=68, 179.2296pt x 114.1866pt>
 File: images/path_inverse.png Graphic file (type png)
 <use images/path_inverse.png>
@@ -428,54 +431,61 @@ Package pdftex.def Info: images/path_inverse.png  used on input line 60.
 <images/loops.png, id=74, 155.3805pt x 97.5645pt>
 File: images/loops.png Graphic file (type png)
 <use images/loops.png>
-Package pdftex.def Info: images/loops.png  used on input line 82.
+Package pdftex.def Info: images/loops.png  used on input line 83.
 (pdftex.def)             Requested size: 155.3801pt x 97.56424pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--93
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--100
+Underfull \hbox (badness 10000) in paragraph at lines 101--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--107
+Underfull \hbox (badness 10000) in paragraph at lines 104--111
 
  []
 
-) (./tex/day_5.tex [12 <./images/loops.png>]) (./tex/day_6.tex
+) (./tex/day_5.tex [12 <./images/loops.png>]) (./tex/day_6.tex [13]
 Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
-[13] [14]) (./tex/day_7.tex
+[14]) (./tex/day_7.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[15]) (./tex/day_8.tex) (./tex/day_9.tex) (./tex/day_10.tex [16]
+[15]) (./tex/day_8.tex) (./tex/day_9.tex [16]) (./tex/day_10.tex
 Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
-
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 46--54
 
  []
 
-[17]
+
 Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 85--87
 
  []
 
-[18]) (./tex/day_11.tex [19] [20]) (./tex/day_12.tex [21]
+) (./tex/day_11.tex [19] [20]
+! Too many }'s.
+l.96         \subsubsection{Homotopy of Maps:}}
+                                               
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+[21]) (./tex/day_12.tex
 Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
  []
@@ -489,37 +499,40 @@ t/10.95 g\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95 ) = \OML
 \T1/cmss/m/n/10.95 and $\OML/cmm/m/it/10.95 g$ \T1/cmss/m/n/10.95 are $[]$. 
  []
 
-[24] [25] [26]) (./tex/day_14.tex [27]) [28] (./notes.aux) ) 
+[24] [25] [26]) (./tex/day_14.tex [27] [28]) (./tex/day_15.tex [29]) [30]
+(./notes.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5122 strings out of 492616
- 68811 string characters out of 6135177
+ 5125 strings out of 492616
+ 68848 string characters out of 6135177
  152107 words of memory out of 5000000
- 8881 multiletter control sequences out of 15000+600000
- 18210 words of font info for 47 fonts, out of 8000000 for 9000
+ 8884 multiletter control sequences out of 15000+600000
+ 16690 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,19n,43p,272b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-d
-ist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/c
-m-super/sfsi1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss080
-0.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/share/texmf-dist/f
-onts/type1/public/cm-super/sfsx1095.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/cm-super/sfsx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfs
-x1440.pfb>
-Output written on notes.pdf (28 pages, 456441 bytes).
+ 41i,19n,43p,272b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist
+/fonts/type1/public/cm-super/sfsi1095.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/cm-super/sfss0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/s
+fss1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></u
+sr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/texmf-
+dist/fonts/type1/public/cm-super/sfsx1440.pfb>
+Output written on notes.pdf (30 pages, 461014 bytes).
 PDF statistics:
- 197 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
+ 199 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

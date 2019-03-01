@@ -1,4 +1,4 @@
-\subsection{Day 6}
+\section{Day 6}
     \begin{enumerate}
         \item \underline{Goal:} Prove that $\pi_{1}(S^1, x)\cong \Z$
         \item \underline{Idea:} $S^1$ can be built by ``wrapping $\R$ around itself''.\\:
@@ -35,24 +35,26 @@
                 (\text{Recall: by }&\text{definition}\ \cos^{-1}(x)\in[0,\pi])\\
             \end{align*}
             Similarly, for $u_2$ for any particular $n\in \Z$, $(n-\frac{1}{4}, n)\cong u_2$.
-        \item \underline{Definition:} Let $p:E \rightarrow B$ be a function between two topological spaces. We say
-            $p$ is a \underline{covering map} if $p$ is,
-            \begin{enumerate}
-                \item $p$ is continuous and surjective
-                \item $\forall b\in B$ there exists a neighborhood $u$ of b such that,
-                    \begin{align*}
-                        p^{-1}(u)=\cup_{\alpha}v_{\alpha}\\
-                    \end{align*}
-                    where $v_\alpha\subseteq E$ are open, disjoint and,
-                    \begin{align*}
-                        p_{|v_{\alpha}}:v_{\alpha}\rightarrow u\\
-                    \end{align*}
-                    is a homeomorphism for every $\alpha$. Note that these open subsets with this property are called
-                    \underline{evenly covered}\\
-                    %see the classroom drawing, think about pancakes%
-                    Note that $b$ is one particular point or neighborhood, but there should be a neighborhood for every single
-                    point in $B$ where all of this junk holds reasonably truish.
-            \end{enumerate}
+        \item 
+            \begin{definition} Let $p:E \rightarrow B$ be a function between two topological spaces. We say
+                $p$ is a \underline{covering map} if $p$ is,
+                \begin{enumerate}
+                    \item $p$ is continuous and surjective
+                    \item $\forall b\in B$ there exists a neighborhood $u$ of b such that,
+                        \begin{align*}
+                            p^{-1}(u)=\cup_{\alpha}v_{\alpha}\\
+                        \end{align*}
+                        where $v_\alpha\subseteq E$ are open, disjoint and,
+                        \begin{align*}
+                            p_{|v_{\alpha}}:v_{\alpha}\rightarrow u\\
+                        \end{align*}
+                        is a homeomorphism for every $\alpha$. Note that these open subsets with this property are called
+                        \underline{evenly covered}\\
+                        %see the classroom drawing, think about pancakes%
+                        Note that $b$ is one particular point or neighborhood, but there should be a neighborhood for every single
+                        point in $B$ where all of this junk holds reasonably truish.
+                \end{enumerate}
+            \end{definition}
         \item \underline{Ex:}
             \begin{align*}
                 p: \R \rightarrow S^1\\
