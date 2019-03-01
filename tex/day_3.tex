@@ -1,6 +1,6 @@
 \section{Day 3}
-    \begin{enumerate}
-        \item\underline{Products of Paths}
+    \subsection{Products of Paths}
+    \begin{itemize}
         \item \underline{Last time:} If $f$ and $g$ are any two paths in $\R^2$ from $p$ to $q$, then $f\cong_{p}q$.
         \item \underline{By contrast:} In, $S'=\{(x,y)\in \R^2| x^2+y^2=1\}$ if
             \begin{align*}
@@ -15,17 +15,13 @@
                 =\{\text{path-homotopy classes of paths in $X$ from $x$ to $y$}\}\ni [f]\\
             \end{align*}
             E.g. in the $S'$ example above, $[f]\neq[g]$
-        \item \underline{Def: } Let the following be so,
+    \end{itemize}
+        \begin{definition} Let the following be so,
             \begin{align*}
                 X &=\ \text{topological space}\\
                 f &=\ \text{path in $X$ from $x$ to $y$}\\
                 g &=\ \text{path in $X$ from $y$ to $z$}\\
             \end{align*}\\
-            \begin{minipage}[c]{\linewidth}
-                \begin{center}
-                \includegraphics[width=\linewidth]{images/concatenation.png}
-                \end{center}
-            \end{minipage}
             Then the \underline{concatenation} of $f$ and $g$ is the path $f*g$ from $x$ to $z$ given by,
             \begin{align*}
                 f*g: &I \rightarrow X\\
@@ -34,9 +30,16 @@
                     g(2s) & \text{if}\ \frac{1}{2}\leq s \leq 1\\
                 \end{cases}\\
             \end{align*}
+        \end{definition}
+        \begin{minipage}[c]{\linewidth}
+            \begin{center}
+            \includegraphics[width=\linewidth]{images/concatenation.png}
+            \end{center}
+        \end{minipage}
+    \begin{itemize}
         \item Why is $f*g$ continuous?\\
-        \newpage
-        \item \underline{Gluing Lemma:} Let the following be so,
+        \begin{theorem}
+            \underline{Gluing Lemma:} Let the following be so,
             \begin{align*}
                 X &= \text{topological space}\\
                 A,B \subseteq X,\ &\text{closed subsets such that } X=A\cup B\\
@@ -67,6 +70,7 @@
                 \end{cases}\\
             \end{align*}
             is continuous. The proof is left as an exercise to the reader. Thanks. (Homework Problem 1)\\
+        \end{theorem}
             \underline{Note:} Applying the gluing lemma to $I = [0,\frac{1}{2}]\cup [\frac{1}{2}, 1]$ shows
             that $f*g$ is continuous.
         \item \underline{Question:} Let the following be so,
@@ -135,4 +139,4 @@
                 h_t=H(s,t)&=(f_t*g_t)(s) \text{ (some path between $x$ and $z$ )}\\
             \end{align*}
             So, $H$ is a path homotopy from $(f_0*g_0)$ to $(f_1*g_1)$.
-    \end{enumerate}
+    \end{itemize}

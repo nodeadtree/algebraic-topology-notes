@@ -1,6 +1,5 @@
 \section{Day 13}
-\begin{enumerate}
-    \item \underline{Theorem:} 
+    \begin{theorem} 
         Let
         \begin{align*}
             f: X\rightarrow Y\\
@@ -15,35 +14,37 @@
             f_*:\pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)\\
         \end{align*}
         are the same homomorphism.
-        \begin{proof}
-            Let $[\alpha]\in \pi_1(X,x_0)$. We want,
-            \begin{align*}
-                f*[\alpha]=g*[\alpha]\\
-                \iff [f\circ \alpha]=[g\circ \alpha]\\
-                \iff f\circ \alpha \cong_{p} g\circ\alpha\\
-            \end{align*}
-            Define,
-            \begin{align*}
-                P: I\times I \rightarrow Y\\
-                P(s,t)=H(\alpha(s), t)\\
-            \end{align*}
-            Equivalently, 
-            \begin{align*}
-                p_t: I \rightarrow Y\\
-                p_t(s)=(h_t\circ \alpha)(s)\\
-            \end{align*}
-            This is a path homotopy from $f\circ \alpha$ to $g\circ\alpha$.
-            Firstly, because $H$ is a homotopy relative to $x_0$.
-            \begin{align*}
-                P(0,t)=H(\alpha(0),t)=H(x_0,t)=y_0\\
-                P(1,t)=H(\alpha(1),t)=H(x_0,t)=y_0\\
-            \end{align*}
-            Because $H$ is a homotopy from $f$ to $g$, the following is true.
-            \begin{align*}
-                P(s,0)=H(\alpha(s),0)=f(\alpha(s))\\
-                P(s,1)=H(\alpha(s),1)=g(\alpha(s))\\
-            \end{align*}
-        \end{proof}
+    \end{theorem} 
+    \begin{proof}
+        Let $[\alpha]\in \pi_1(X,x_0)$. We want,
+        \begin{align*}
+            f*[\alpha]=g*[\alpha]\\
+            \iff [f\circ \alpha]=[g\circ \alpha]\\
+            \iff f\circ \alpha \cong_{p} g\circ\alpha\\
+        \end{align*}
+        Define,
+        \begin{align*}
+            P: I\times I \rightarrow Y\\
+            P(s,t)=H(\alpha(s), t)\\
+        \end{align*}
+        Equivalently, 
+        \begin{align*}
+            p_t: I \rightarrow Y\\
+            p_t(s)=(h_t\circ \alpha)(s)\\
+        \end{align*}
+        This is a path homotopy from $f\circ \alpha$ to $g\circ\alpha$.
+        Firstly, because $H$ is a homotopy relative to $x_0$.
+        \begin{align*}
+            P(0,t)=H(\alpha(0),t)=H(x_0,t)=y_0\\
+            P(1,t)=H(\alpha(1),t)=H(x_0,t)=y_0\\
+        \end{align*}
+        Because $H$ is a homotopy from $f$ to $g$, the following is true.
+        \begin{align*}
+            P(s,0)=H(\alpha(s),0)=f(\alpha(s))\\
+            P(s,1)=H(\alpha(s),1)=g(\alpha(s))\\
+        \end{align*}
+    \end{proof}
+\begin{itemize}
     \item
         \underline{Application:} Suppose $A\subseteq X$ and that there exists
         a homotopy $H$ from
@@ -63,10 +64,13 @@
         \end{enumerate}
         In this situation, we say that $A$ is a \underline{deformation retract} of $X$
         or that $H$ is a \underline{deformation retraction} of $X$ onto $A$.
-    \item \underline{Theorem:} If $A$ is a deformation retract of $X$, then,
+    \end{itemize}
+    \begin{theorem} If $A$ is a deformation retract of $X$, then,
         \begin{align*}
             \pi_1(X,x_0)\cong \pi_1(A,x_0),\ \forall x_0\in A\\
         \end{align*}
+    \end{theorem}
+    \begin{itemize}
     \item\underline{Ex:}
         \begin{align*}
             X=\R^2\\
@@ -105,7 +109,8 @@
         \begin{align*}
             \pi_1(\R^3\setminus\{\text{z-axis}\})\cong \pi_1(A)\cong \pi_1(\R^2\setminus\{(0,0)\})\cong \pi_1(S^1)\cong \Z\\
         \end{align*}
-    \item \begin{proof} Let $x_0\in A$. Let,
+    \end{itemize}
+    \begin{proof} Let $x_0\in A$. Let,
             \begin{align*}
                 i: A\rightarrow X\\
                 i(a)=a\\

@@ -6,9 +6,13 @@
         \item \underline{Ex:} Last time it was claimed that $\pi_1(\R^2\setminus \{(0,0)\})=\Z$.
         \item\underline{Paths and Homotopies}
         \item Let $X$ be a topological space.
-        \item Def: A \underline{path} in $X$ is a continuous map $f:I \rightarrow X$, where $I=[0,1]\subseteq \R$ (with the
+    \end{itemize}
+        \begin{definition}
+            A \underline{path} in $X$ is a continuous map $f:I \rightarrow X$, where $I=[0,1]\subseteq \R$ (with the
             subspace topology from the Euclidean topology on $\R$.\\
             If $f(0)=p$ and $f(1)=q$, we say $f$ is a path \underline{from $p$ to $q$}.
+        \end{definition}
+    \begin{itemize}
         \item \underline{Ex:}
             \begin{align*}
                 X=\R^2\\
@@ -27,7 +31,9 @@
                     \includegraphics[]{images/homotopy_class_2.png}
                 \end{center}
             \end{minipage}\\
-        \item Def: Let $f$ and $g$ be paths in $X$ from $p$ to $q$. A \underline{path homotopy} from $f$ to $g$ is a continuous function,
+    \end{itemize}
+        \begin{definition}
+            Let $f$ and $g$ be paths in $X$ from $p$ to $q$. A \underline{path homotopy} from $f$ to $g$ is a continuous function,
             \begin{align*}
                 H: I\times I \rightarrow X\
             \end{align*}
@@ -39,6 +45,8 @@
                 H(0,t)=p,\ \forall s\\
                 H(1,t)=q,\ \forall s\\
             \end{align*}
+        \end{definition}
+    \begin{itemize}
             To make sense of this, define, $\forall t$,
             \begin{align*}
                 h_t: I\rightarrow X\\
@@ -56,25 +64,28 @@
             This is continuous because $H$ is continuous, and it goes from $p$ to $q$, because $h_t(0)=H(0,t)=p$ and $h_t(1)=H(1,t)=q$.
             $h_0(s)=f$ because $h_0(s)=H(s,0)=f(s),\ \forall s$\\
             and $h_1(s)=g$ because $h_1(s)=H(s,1)=g(s),\ \forall s$\\
-        \item Def: If $\exists$ a path homotopy from $f$ to $g$, we say $f$ and $g$ are \underline{path-homotopic}, and $f\cong g$\\
-            \underline{Ex:} $X=\R^2$, Let,
-            \begin{align*}
-                f(s)=(\cos(\pi s), \sin(\pi s))\\
-                f(s)=(\cos(\pi s), 2\sin(\pi s))\\
-            \end{align*}
-            Both are paths in $\R^2$ from $(1,0)$ to $(-1,0)$.\\
-            Then,
-            \begin{align*}
-                H: I\times I \rightarrow \R^2\\
-                H(s,t)=(\cos(\pi s), (t+1)*\sin(\pi s))\\
-            \end{align*}
-            $H$ is a path homotopy from $f$ to $g$, because,
-            \begin{align*}
-                H(s,0)=(\cos(\pi s), \sin(\pi s))=f(s)\\
-                H(s,1)=(\cos(\pi s), 2\sin(\pi s))=g(s)\\
-                H(0,t)=(\cos(0), (t+1)\sin(0))=(1,0)\forall t\\
-                H(1,t)=(\cos(\pi), (t+1)\sin(\pi))=(-1,0)\forall t\\
-            \end{align*}
+    \end{itemize}
+    \begin{definition} If $\exists$ a path homotopy from $f$ to $g$, we say $f$ and $g$ are \underline{path-homotopic}, and $f\cong g$\\
+        \underline{Ex:} $X=\R^2$, Let,
+        \begin{align*}
+            f(s)=(\cos(\pi s), \sin(\pi s))\\
+            f(s)=(\cos(\pi s), 2\sin(\pi s))\\
+        \end{align*}
+        Both are paths in $\R^2$ from $(1,0)$ to $(-1,0)$.\\
+        Then,
+        \begin{align*}
+            H: I\times I \rightarrow \R^2\\
+            H(s,t)=(\cos(\pi s), (t+1)*\sin(\pi s))\\
+        \end{align*}
+        $H$ is a path homotopy from $f$ to $g$, because,
+        \begin{align*}
+            H(s,0)=(\cos(\pi s), \sin(\pi s))=f(s)\\
+            H(s,1)=(\cos(\pi s), 2\sin(\pi s))=g(s)\\
+            H(0,t)=(\cos(0), (t+1)\sin(0))=(1,0)\forall t\\
+            H(1,t)=(\cos(\pi), (t+1)\sin(\pi))=(-1,0)\forall t\\
+        \end{align*}
+    \end{definition}
+    \begin{itemize}
         \item \underline{Question:} Find a path homotopy from $\R^2$ from $f(s)=(s,s)$, and $g(s)=(s,s^2)$\\
             Answer(June): $H(s,t)=(s,s^{t+1})$\\
             (see the notebook, there's a solution there. Keep in mind that you want to try to find $p$ and $q$ first, before you do anything else)\\

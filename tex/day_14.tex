@@ -1,56 +1,57 @@
 \section{Day 14}
-\begin{enumerate}
-    \item Quiz(Midterm) on Monday, whenever that is. Standard Dr. Clader Format. Last
-        covered topic on that will be deformation retractions.
-    \item Recall from last time:
-        \begin{enumerate}
-            \item \underline{Theorem: }
-                \begin{align*}
-                    A\subseteq X\\
-                    x_0 \in A\\
-                    H=\text{ deformation retraction of $X$ onto $A$ }
-                \end{align*}
-                Recall that H is a homotopy relative to $x_0$
-                \begin{align*}
-                    id: X\rightarrow X\\
-                    r: X \rightarrow X\\
-                    s.t. r(x)\in A,\ \forall x\in X\\
-                \end{align*}
-                Then,
-                \begin{align*}
-                    \pi_1(X,x_0)\cong\pi_1(A,x_0)\\
-                \end{align*}
-                ($r$ is a retraction)
-                \begin{proof}
-                    Consider, $X \leftrightharpoons A$, where
-                    $X\rightarrow A$ is $s$, the same function as $r$,
-                    and $A\rightarrow X$ is the inclusion map. Then,
-                    \begin{align*}
-                        s\circ i &= id: A\rightarrow A\\
-                        \implies s_* \circ i_* &= id: \pi_1(A,x_0)\rightarrow\pi_1(A,x_0)\\
-                    \end{align*}
-                    In the other order:
-                    \begin{align*}
-                        i\circ s = r\cong id\\
-                    \end{align*}
-                    Note that $r$ is a homotopy relative to $x_0$, and
-                    that the next step follows from the theorem from the beginning of
-                    last class.
-                    \begin{align*}
-                        \implies i_* \circ s_* = id: \pi_1(X,x_0)\rightarrow\pi_1(X,x_0)\\
-                    \end{align*}
-                    So we have:
-                    \begin{align*}
-                        \pi_1(X,x_0)\leftrightharpoons\pi_1(A,x_0)\\
-                        s_*:\pi_1(X,x_0)\rightarrow\pi_1(A,x_0)\\
-                        i_*:\pi_1(A,x_0)\rightarrow\pi_1(X,x_0)\\
-                    \end{align*}
-                    and we've shown $s_*$ and $i_*$ are inverses, giving
-                    \begin{align*}
-                        \pi_1(X,x_0)\cong\pi_1(A,x_0)\\
-                    \end{align*}
-                \end{proof}
-        \end{enumerate}
+    \begin{itemize}
+        \item Quiz(Midterm) on Monday, whenever that is. Standard Dr. Clader Format. Last
+            covered topic on that will be deformation retractions.
+        \item Recall from last time:
+    \end{itemize}
+    \begin{theorem}
+        \begin{align*}
+            A\subseteq X\\
+            x_0 \in A\\
+            H=\text{ deformation retraction of $X$ onto $A$ }
+        \end{align*}
+        Recall that H is a homotopy relative to $x_0$
+        \begin{align*}
+            id: X\rightarrow X\\
+            r: X \rightarrow X\\
+            s.t. r(x)\in A,\ \forall x\in X\\
+        \end{align*}
+        Then,
+        \begin{align*}
+            \pi_1(X,x_0)\cong\pi_1(A,x_0)\\
+        \end{align*}
+        ($r$ is a retraction)
+    \end{theorem}
+        \begin{proof}
+            Consider, $X \leftrightharpoons A$, where
+            $X\rightarrow A$ is $s$, the same function as $r$,
+            and $A\rightarrow X$ is the inclusion map. Then,
+            \begin{align*}
+                s\circ i &= id: A\rightarrow A\\
+                \implies s_* \circ i_* &= id: \pi_1(A,x_0)\rightarrow\pi_1(A,x_0)\\
+            \end{align*}
+            In the other order:
+            \begin{align*}
+                i\circ s = r\cong id\\
+            \end{align*}
+            Note that $r$ is a homotopy relative to $x_0$, and
+            that the next step follows from the theorem from the beginning of
+            last class.
+            \begin{align*}
+                \implies i_* \circ s_* = id: \pi_1(X,x_0)\rightarrow\pi_1(X,x_0)\\
+            \end{align*}
+            So we have:
+            \begin{align*}
+                \pi_1(X,x_0)\leftrightharpoons\pi_1(A,x_0)\\
+                s_*:\pi_1(X,x_0)\rightarrow\pi_1(A,x_0)\\
+                i_*:\pi_1(A,x_0)\rightarrow\pi_1(X,x_0)\\
+            \end{align*}
+            and we've shown $s_*$ and $i_*$ are inverses, giving
+            \begin{align*}
+                \pi_1(X,x_0)\cong\pi_1(A,x_0)\\
+            \end{align*}
+        \end{proof}
+\begin{itemize}
     \item \underline{Fun Font Fabtacular}
         Letter fundamental groups.
         \begin{enumerate}
