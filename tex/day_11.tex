@@ -11,8 +11,8 @@
         Let $\varphi: X\rightarrow Y$, be a continuous
         map, then the \underline{homomorphism induced by $\varphi$} is:
         \begin{align*}
-            \varphi_{*}: \pi_1(X,x)\rightarrow \pi_1(Y,y)\\
-            \varphi_{*}([f])=[\varphi\circ f]\\
+            \varphi_{*}&: \pi_1(X,x)\rightarrow \pi_1(Y,y)\\
+            \varphi_{*}([f])&=[\varphi\circ f]\\
         \end{align*}
         See the picture of the picture drawn on the board, make a drawyboye.
     \item \underline{Lemma:} (this is referred to lemma 1)If
@@ -37,16 +37,16 @@
             \end{align*}
         Given any $[f]\in\pi_1(X,x)$:
             \begin{align*}
-                (\psi\circ\varphi)_{*}([f])=[(\psi\circ\varphi)\circ f]\\
-                =[\psi\circ(\varphi\circ f)]\\
-                =\psi_{*}[\varphi\circ f]\\
-                =\psi_{*}(\varphi_{*}(f))\\
-                =(\psi_{*}\circ\varphi_{*})([f])\\
+                (\psi\circ\varphi)_{*}([f])&=[(\psi\circ\varphi)\circ f]\\
+                &=[\psi\circ(\varphi\circ f)]\\
+                &=\psi_{*}[\varphi\circ f]\\
+                &=\psi_{*}(\varphi_{*}(f))\\
+                &=(\psi_{*}\circ\varphi_{*})([f])\\
             \end{align*}
         Given any $[f]\in\pi_1(X,x)$:
             \begin{align*}
-                id_{*}([f])=[id\circ f]\\
-                =[f]\\
+                id_{*}([f])&=[id\circ f]\\
+                &=[f]\\
             \end{align*}
     \end{proof}
     \begin{theorem} if $\varphi: X\rightarrow Y$ is a homeomorphism,
@@ -63,18 +63,18 @@
             (Note that this is doable, because $\varphi$ is a homeomorphism, $\varphi^{-1}:Y\rightarrow X$ exists, and is continuous)\\
             To check this:
             \begin{align*}
-                \varphi_{*}\circ (\varphi^{-1})\\
-                =(\varphi\circ\varphi^{-1}),\ \text{by lemma 1 shown today}\\
-                =id_{*},\ \text{by definition of $\varphi^{-1}$ (identity on y)}\\
-                =id,\ \text{by lemma 2 shown today (identity on x)}\\
-                (\varphi^{-1})_{*}\circ\varphi_{*}=(\varphi^{-1}\circ\varphi)_{*}=id_{*}=id\\
+                \varphi_{*}\circ (\varphi^{-1})
+                &=(\varphi\circ\varphi^{-1}),\ \text{by lemma 1 shown today}\\
+                &=id_{*},\ \text{by definition of $\varphi^{-1}$ (identity on y)}\\
+                &=id,\ \text{by lemma 2 shown today (identity on x)}\\
+                (\varphi^{-1})_{*}\circ\varphi_{*}&=(\varphi^{-1}\circ\varphi)_{*}=id_{*}=id\\
             \end{align*}
             This by definition means $\varphi_{*}$ and $(\varphi^{-1})_{*}$ are inverse functions.
             Additionally, this small red box has made it onto the board, for clarification.
             \begin{align*}
-                id_x: X \rightarrow Y\\
-                id_{\pi_1(X,x)}:\pi_1(X,x)\rightarrow\pi_1(X,x)\\
-                \text{Lemma: }(id_{x})_{*}id_{\pi_1(X,x)}\\
+                id_x&: X \rightarrow Y\\
+                id_{\pi_1(X,x)}&:\pi_1(X,x)\rightarrow\pi_1(X,x)\\
+                \text{Lemma: }&(id_{x})_{*}id_{\pi_1(X,x)}\\
             \end{align*}
         \end{proof}
     \begin{itemize}
@@ -86,8 +86,8 @@
             But, non-homeomorphic spaces \underline{can} have isomorphic $\pi_{1}$\\
             \underline{Ex:}
             \begin{align*}
-                X=.\\
-                Y=\R^2\\
+                X&=.\\
+                Y&=\R^2\\
             \end{align*}
             These are not homeomorphic, clearly X is compact and Y isn't, but their fundamental groups are
             isomorphic, since the fundamental group of $X$ is just $\{1\}$, and clearly this is also true

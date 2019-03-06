@@ -95,7 +95,14 @@
                 (f\circ g) = \hat{\beta}\circ (id_Y)_* \text{ for some path in $\beta $ }\\
                 \rightarrow f_* \circ g_* = \hat{\beta}\\
             \end{align*}
-            Thus, if $f(x_0)=y_0$, $g(y_0)=x_1$, $f(x)=y_1$:
+            Thus, if $f(x_0)=y_0$, $g(y_0)=x_1$, $f(x)=y_1$:\\
+            \begin{center}
+                \begin{tikzcd}
+                    \pi_1(X,x_0) \arrow[d, "\hat{\alpha}"] \arrow[r, "f_*"]& \pi_1(Y,y_0) 
+                    \arrow[ld, "g_*"'] \arrow[d, "\hat{\beta}"]\\
+                    \pi_1(X,x_1)\arrow[r, "f_*"] &\pi_1(Y,y_1)\\
+                \end{tikzcd}\\
+            \end{center}
             (Some fuckin arrow diagram Ah fuck)
             Therefore,
             \begin{align*}
@@ -106,5 +113,6 @@
             \begin{align*}
                 f_*\circ g_* = \hat{\beta} \text{ (an isomorphism!) }\\
                 \rightarrow g_* \text{ is injective}
+        \end{proof}
     \end{corollary}
     \end{theorem}

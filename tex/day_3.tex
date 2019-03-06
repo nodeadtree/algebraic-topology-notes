@@ -11,7 +11,7 @@
         \item \underline{Fact: (HW)} $\cong_{p}$ is an equivalence relation on the set $\{$paths in $X$ from $x$ to $y\}$
             Thus we can consider the set,
             \begin{align*}
-                \faktor{\{ \text{paths in $X$ from $x$ to $y$}\}}{\cong_{p}}\\
+                \faktor{\{ \text{paths in $X$ from $x$ to $y$}\}}{\cong_{p}}
                 =\{\text{path-homotopy classes of paths in $X$ from $x$ to $y$}\}\ni [f]\\
             \end{align*}
             E.g. in the $S'$ example above, $[f]\neq[g]$
@@ -24,7 +24,7 @@
             \end{align*}\\
             Then the \underline{concatenation} of $f$ and $g$ is the path $f*g$ from $x$ to $z$ given by,
             \begin{align*}
-                f*g: &I \rightarrow X\\
+                f*g:\ &I \rightarrow X\\
                 (f*g)(s)&=\begin{cases}
                     f(2s) & \text{if}\ 0\leq s \leq \frac{1}{2}\\
                     g(2s) & \text{if}\ \frac{1}{2}\leq s \leq 1\\
@@ -52,8 +52,8 @@
                 \end{minipage}
             Let the following continuous functions be defined,
             \begin{align*}
-                f&: A \rightarrow Y\\
-                g&: B \rightarrow Y\\
+                f&:\ A \rightarrow Y\\
+                g&:\ B \rightarrow Y\\
             \end{align*}
             such that $f(x)=g(x)\ \forall x \in A\cap B$.\\
                         \begin{minipage}[c]{\linewidth}
@@ -63,8 +63,8 @@
                         \end{minipage}\\ 
                     Then the function,\\
             \begin{align*}
-                h: X\rightarrow Y\\
-                h(x)=\begin{cases}
+                h&:\ X\rightarrow Y\\
+                h(x)&=\begin{cases}
                     f(x) & \text{if } x\in A\\
                     g(x) & \text{if } x\in B\\
                 \end{cases}\\
@@ -121,13 +121,13 @@
         \item \underline{Idea of proof of proposition:}\\
             Let,
             \begin{align*}
-                F&: I\times I\rightarrow X \text{ be a path homotopy from $f_0$ to $f_1$}\\
-                G&: I\times I\rightarrow X \text{ be a path homotopy from $g_0$ to $g_1$}\\
+                F&:\ I\times I\rightarrow X \text{ be a path homotopy from $f_0$ to $f_1$}\\
+                G&:\ I\times I\rightarrow X \text{ be a path homotopy from $g_0$ to $g_1$}\\
             \end{align*}
             Then we can define,
             \begin{align*}
-                H: I\times I \rightarrow X\\
-                H(s,y)=\begin{cases}
+                H&:\ I\times I \rightarrow X\\
+                H(s,y)&=\begin{cases}
                     F(2s,t) & \text{if } 0\leq s \leq \frac{1}{2}\\
                     G(2s-1,t) & \text{if } \frac{1}{2}\leq s \leq 1 \\
                 \end{cases}\\

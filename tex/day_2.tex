@@ -15,15 +15,15 @@
     \begin{itemize}
         \item \underline{Ex:}
             \begin{align*}
-                X=\R^2\\
-                f: I \rightarrow\R^2\\
-                f(t)=(1-2t,0)\\
+                X&=\R^2\\
+                f: I &\rightarrow\R^2\\
+                f(t)&=(1-2t,0)\\
             \end{align*}
             $f$ is a path in $\R^2$ from $(1,0)$ to $(-1,0)$.
         \item Another path in $\R^2$ from $(1,0)$ to $(-1,0)$ is,
             \begin{align*}
-                g: I \rightarrow \R^2\\
-                g(t)=(\cos(\pi t),\sin(\pi t))\\
+                g: I &\rightarrow \R^2\\
+                g(t)&=(\cos(\pi t),\sin(\pi t))\\
             \end{align*}
         \item To make precise, ``Deforming'' one path into another:\\
             \begin{minipage}[c]{\linewidth}
@@ -40,17 +40,17 @@
             (note that elements of $I\times I$ resemble, $(s,t)$)
             Such that,
             \begin{align*}
-                H(s,0)=f(s),\ \forall s\\
-                H(s,1)=g(s),\ \forall s\\
-                H(0,t)=p,\ \forall s\\
-                H(1,t)=q,\ \forall s\\
+                H(s,0)&=f(s),\ \forall s\\
+                H(s,1)&=g(s),\ \forall s\\
+                H(0,t)&=p,\ \forall s\\
+                H(1,t)&=q,\ \forall s\\
             \end{align*}
         \end{definition}
     \begin{itemize}
             To make sense of this, define, $\forall t$,
             \begin{align*}
-                h_t: I\rightarrow X\\
-                h_t(s)=H(s,t)\\
+                h_t: I&\rightarrow X\\
+                h_t(s)&=H(s,t)\\
             \end{align*}
             Then, $\forall t$,
             \begin{align*}
@@ -74,15 +74,15 @@
         Both are paths in $\R^2$ from $(1,0)$ to $(-1,0)$.\\
         Then,
         \begin{align*}
-            H: I\times I \rightarrow \R^2\\
-            H(s,t)=(\cos(\pi s), (t+1)*\sin(\pi s))\\
+            H: I\times I &\rightarrow \R^2\\
+            H(s,t)&=(\cos(\pi s), (t+1)*\sin(\pi s))\\
         \end{align*}
         $H$ is a path homotopy from $f$ to $g$, because,
         \begin{align*}
-            H(s,0)=(\cos(\pi s), \sin(\pi s))=f(s)\\
-            H(s,1)=(\cos(\pi s), 2\sin(\pi s))=g(s)\\
-            H(0,t)=(\cos(0), (t+1)\sin(0))=(1,0)\forall t\\
-            H(1,t)=(\cos(\pi), (t+1)\sin(\pi))=(-1,0)\forall t\\
+            H(s,0)&=(\cos(\pi s), \sin(\pi s))=f(s)\\
+            H(s,1)&=(\cos(\pi s), 2\sin(\pi s))=g(s)\\
+            H(0,t)&=(\cos(0), (t+1)\sin(0))=(1,0)\forall t\\
+            H(1,t)&=(\cos(\pi), (t+1)\sin(\pi))=(-1,0)\forall t\\
         \end{align*}
     \end{definition}
     \begin{itemize}
@@ -92,8 +92,8 @@
             Answer(Dr. Clader): General Trick In $\R^2$ let $f$ and $g$ be any two paths from $p$ to $q$, then the
             \underline{straight line homotopy} is as follows,
             \begin{align*}
-                H: I \times I \rightarrow \R^2\\
-                H(s,t)=(1-t)*f(s)+t*g(s)\\
+                H: &I \times I \rightarrow \R^2\\
+                H(s,t)&=(1-t)*f(s)+t*g(s)\\
             \end{align*}
             Note that this resembles the stuff you've seen in optimization and advanced linear algebra. This is a pretty powerful tool,
             remember and fear it.
