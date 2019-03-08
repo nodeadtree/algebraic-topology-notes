@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.18)  7 MAR 2019 16:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.18)  8 MAR 2019 13:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -827,15 +827,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--99
 
  []
 
-) [32] (./notes.aux)
+) (./tex/day_18.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+[32] [33]
+! Misplaced alignment tab character &.
+l.64             $H&
+                    :X\times I \rightarrow X$ a homotopy from $id_X:X\righta...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+) [34] (./notes.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 16760 strings out of 492616
- 324384 string characters out of 6135177
- 382593 words of memory out of 5000000
+ 16763 strings out of 492616
+ 324420 string characters out of 6135177
+ 383593 words of memory out of 5000000
  20269 multiletter control sequences out of 15000+600000
  16690 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -856,10 +872,10 @@ blic/cm-super/sfss0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/s
 fss1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></u
 sr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/texmf-
 dist/fonts/type1/public/cm-super/sfsx1440.pfb>
-Output written on notes.pdf (32 pages, 479134 bytes).
+Output written on notes.pdf (34 pages, 487588 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
+ 215 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
