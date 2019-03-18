@@ -1,0 +1,86 @@
+\documentclass[../notes.tex]{subfiles}
+\begin{document}
+    \section{Day 19}
+        \subsection{Calculating $\pi_1$ piecewise}
+        \begin{itemize}
+            \item \underline{Goal:} To calculate $\pi_1(X)$ with 
+                $\pi_1(\text{``pieces of X''})$
+            \item The ultimate theorem we'll prove for this is the 
+                \underline{Van Kampen Theorem}, which will say,
+                Let,
+                \[
+                    X=U\cup V
+                \]
+                Where $U$ and $V$ are path connected open subsets of X. Furthermore
+                their intersection is \textit{also} path connected. Then,
+                \[
+                    \pi_1(X)=\pi_1(U)?\pi_1(V)\\
+                \]
+                Note that the ? takes the place of some as yet undefined operation,
+                and it will depend not only on $\pi_1(U)$ or $\pi_1(V)$, but their
+                interaction.
+        \end{itemize}
+        \subsection{Free product of groups}
+        \begin{definition}
+            A \underline{word} in $G$ and $H$ is a string of symbols,
+            \[
+                a_1,a_2,a_3,\dots,a_n
+            \]
+            where $a_i$ is either an element of $G$ or an element of $H$
+        \end{definition}
+        \begin{itemize}
+            \item
+                \begin{align*}
+                    \underbrace{G = \{a^0,a^1,a^2,a^3\}}_{\text{
+                            group under multiplication if we declare $a^4=a^0$
+                        }
+                    }\\
+                    \underbrace{H = \{b^0,b^1,b^2\}}_{\text{
+                            group under multiplication if we declare $b^3=b^0$
+                        }
+                    }\\
+                \end{align*}
+                An example of a word in $G$ and $H$ is 
+                \[
+                    a^1a^1b^2a^1b^0b^1
+                \]
+                Thus far, this is a different word from
+                \[
+                    a^2b^2a^1b^1
+                \]
+                But we'd like for them to be equivalent. To achieve
+                this end, we define two reducing operations on 
+                $\{\text{words in $G$ and $H$}\}$
+                \begin{enumerate}
+                    \item If a word contains a copy of $1_g$, the identity
+                        of $G$ or $1_h$ remove that symbol from the word.
+                    \item If a word contains two consecutive terms
+                        from the same group, replace them with their product.
+                \end{enumerate}
+                This allows for these two things to be set equal by a sequence
+                of the reducing operations.
+                \begin{align*}
+                    a^1a^1b^2a^1b^0b^1\\
+                    a^2b^2a^1b^0b^1\\
+                    a^2b^2a^1b^1\\
+                \end{align*}
+        \end{itemize}
+        \begin{definition}
+            A word is called \underline{reduced} if no further reducing operations
+            can be applied to it.
+        \end{definition}
+        \begin{itemize}
+            \item \underline{Ex:} $a^1b^2a^1$ is the reduced form of $a^1a^{-1}a^1b^1b^1a^1$.
+            \item \underline{Observation:} Any word can be converted via a 
+                sequence of reducing operations to a unique reduced word.\\
+        \end{itemize}
+        \begin{definition}
+            Let $H$ and $G$ be any groups. Their \underline{free product}
+            \[
+                G*H=\{\text{reduced words in $G$ and $H$}\}
+            \]
+            This is a group under the operation of concatenation followed
+            by reduction.
+            Note that $G*H$ is an infinite non-abelian group.
+        \end{definition}
+\end{document}

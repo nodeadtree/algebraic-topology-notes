@@ -1,0 +1,75 @@
+\subsection{Day 15}
+\subsubsection{Continuation and finish of Day 14}
+\begin{itemize}
+    \item A space with the same $\pi_1$ as ``B''
+    \item \underline{Ex:}
+        \begin{align*}
+            X &= \R^2\setminus\{p,q\}\\
+            p &= (-1,0)\\
+            q &= (1,0)\\
+        \end{align*}
+        To see that $\pi_1(X) \cong \pi(\infty)$ (where infinity isn't actually infinity,
+        but two circles joined together to look like a butt.), we can construct a 
+        deformation retraction of $X$ onto,
+        \[
+            A=\{(x+1)^2+y^2=1\}\cup \{(x-1)^2+y^2=1\}
+        \]
+        Pictorially, refer to the picture taken in class.
+        \begin{enumerate}
+            \item Deformation retract $X$ onto a closed disk of radius 2, centered
+                at (0,0)
+            \item Then Deformation retract onto a union of two closed disks vertically, 
+                again, refer to the goddamn picture.
+        \end{enumerate}
+    \item
+        \underline{Ex:}
+        \[
+            \theta=\{x^2+y^2=1\}\cup\{(x,0)| -1 \leq x \leq 1\}\\
+        \]
+        Oh yeah, another goddamn picture. To see that $\pi_1(\theta)\cong\pi_{1}(\infty)$,
+        (again using infinity in lieu of the double circle butt)
+        we can construct a deformtaion retraction of $\R^2\setminus\{p^{\prime},q^{\prime}\}$
+        onto $\theta$ where $p^{\prime}=(0,\frac{1}{2})$ and $q^{\prime}=(0,-\frac{1}{2})$
+    \item \underline{Observation:} This shows that,
+        \[
+            \pi_1(\infty)=\pi_1(\theta)\\
+        \]
+        because both of them are isomorphic to $\pi_1(\R\setminus\{\text{two points}\})$
+        But neither $\infty$ nor $\theta$ are deformation retracts of eachother.
+    \item They're related by a more general relationship, that of homotopy equivalence.
+\end{itemize}
+\subsubsection{Homotopy Equivalence}
+\begin{definition}
+    A continuous map,
+    \[
+        f: X\rightarrow Y\\
+    \]
+    is called a \underline{homotopy equivalence} if there exists a $g:X\rightarrow Y$ such
+    that $f\circ g\cong id_Y$, and $g\circ f \cong id_X$, with our equivalency being
+    homotopic to.
+\end{definition}
+\begin{itemize}
+    \item \underline{Goals:} A homotopy equivalence induces an $\cong$ on $\pi_1$.
+    \item Any deformation retraction ``yields'' a homotopy equivalence, but homotopy
+        equivalence is an EQUIVALENCE relation. Sick.
+    \item \underline{Ex:}
+        \begin{align*}
+            X=\R^2\\
+            A=\{0,0\}\\
+        \end{align*}
+        Then $A$ is a deformation retract of $X$.
+        \[
+            H((x,y),t)=((1-t)x,(1-t)y)
+        \]
+        But, $A$ is \underline{not} homeomorphic to $X$
+    \item \underline{Ex:}
+        Wow, yet another goddamn picture. Wonderful. Refer to the appropriate photograph.
+        Closed disks in $R^2$, then $A$ is a deformation retraction of $X$, and also
+        $A$ is homeomorphic to $X$. Look at the picture ya doink.\\
+        $X$ is homeomorphic to $Y$ implies that $\pi_1(X)\cong\pi_1(Y)$, but the
+        converse is not true, e.g.:
+        $X$ is a deformation retraction of $Y$ implies that $\pi_1(X)\cong \pi_1(Y)$
+        But not converseley, e.g:
+        $X$ is homotopy equivalent to $Y$ implies $\pi_1(X)\cong \pi_1(Y)$.\\
+        None of these are conversely true. Wonderful! That was confusing.
+\end{itemize}

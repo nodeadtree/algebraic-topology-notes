@@ -1,0 +1,55 @@
+\section{Day 7}
+    \subsubsection{Guest lecturer: Mattias ``your regular lecturer is more qualified for this'' Beck}
+    \begin{itemize}
+        \item Recalling the definition of an evenly covered set. New notation was introduced, but
+            \LaTeX is behind the times.
+            Let $E$ and $B$ be topological spaces
+            %\hookrightarrow for injectivity
+            \begin{align*}
+                \phi&:E \twoheadrightarrow B\\
+                \forall b \in B,&\ \exists u\ \text{a neighborhood of b}: p^{-1}(u)=\cup_{\alpha}v_\alpha\\
+                p_{|v_{\alpha}}&: v_{\alpha}\rightarrow u\\
+            \end{align*}
+        \item \underline{Fun notation facts:}\\
+            $\twoheadrightarrow$ indicates a surjective function\\
+            $\hookrightarrow$ indicates an injective function\\
+            Combining the two gives you a bijective function, but that symbol doesn't exist
+            in latex apparently.
+        \item \underline{Example covering:}
+            \begin{align*}
+                E&=\R\\
+                \phi(x)&=(\cos(2\pi x), \sin(2\pi x))\\
+                B&=S^{1}\\
+            \end{align*}
+    \end{itemize}
+            \begin{definition} Given a covering map from topological
+                spaces $E$ to $B$
+                \begin{align*}
+                    p: E\rightarrow B\\
+                \end{align*}
+                    a path in our topological space B,
+                \begin{align*}
+                    f: I \rightarrow B\\
+                \end{align*}
+                A \underline{lift} of $f$ is a path, $\tilde{f}: I\rightarrow E$, such that
+                $f=p\circ \tilde{f}$
+            \end{definition}
+    \begin{itemize}
+        \item 
+            This is theoretically a theorem.\\
+            Given covering map $p:E\rightarrow B$, $p(e)=b$,
+            $f:I \rightarrow B$ path beginning at b, then there does not exist a left $\tilde{f}$,
+            of $f$ beginning at $e$ Read Lemma 54.1 Munkres. (?!?!?)
+    \end{itemize}
+    \begin{theorem}
+        Let the following be so,
+        \begin{align*}
+            E& \text{ be a topological space}\\
+            B& \text{ be a topological space}\\
+            p&:E \rightarrow B \text{ a covering map}\\
+            f&:I \rightarrow B \text{ path beginning at $b$ }\\
+            e &\in E,\ s.t.\ p(e)=b\\
+        \end{align*}
+        Then there exists a unique path, $\tilde{f}$ in $E$ such that $p\circ \tilde{f}=f$, and
+        $\tilde{f}(0)=e$
+    \end{theorem}

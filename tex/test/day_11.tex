@@ -1,0 +1,109 @@
+\section{Day 11}
+    \subsubsection{Examining the group structure of $*$ functions}
+    \begin{itemize}
+        \item Note that this Friday, office hours will be at 3-4pm.
+        \item \underline{We want:} If $X\cong Y$, then $\pi_1(X,x)\cong \pi_1(Y,y)$,
+            or that, if two spaces are homeomorphic, then their fundamental groups are isomorphic. We
+            will explore the tools used to show this in this lecture. From homework 2, we get the following
+            definition
+    \end{itemize}
+    \begin{definition}
+        Let $\varphi: X\rightarrow Y$, be a continuous
+        map, then the \underline{homomorphism induced by $\varphi$} is:
+        \begin{align*}
+            \varphi_{*}&: \pi_1(X,x)\rightarrow \pi_1(Y,y)\\
+            \varphi_{*}([f])&=[\varphi\circ f]\\
+        \end{align*}
+        See the picture of the picture drawn on the board, make a drawyboye.
+    \item \underline{Lemma:} (this is referred to lemma 1)If
+        \begin{align*}
+            X\rightarrow^{\varphi}Y\rightarrow^{\psi}Z\\
+        \end{align*}
+        Where $\varphi$ and $\psi$ are both continuous, then,
+        \begin{align*}
+            (\psi \circ \varphi)_{*}=\psi \circ_{*} \varphi_{*}\\
+        \end{align*}
+        Additionally, (This is referred to as lemma 2)
+        \begin{align*}
+            {id}_{*}=id\\
+        \end{align*}
+        (or that given the $id: X\rightarrow Y$, the induced homomorphism,
+        $\pi_{1}(X,x)\rightarrow \pi_{1}(Y,y)$ is the identity)
+    \end{definition}
+    \begin{proof}
+        Firstly, Both sides are homomorphisms
+            \begin{align*}
+                \pi_1(X,x)\rightarrow\pi_1(Z,(\psi\circ\varphi)(x))\\
+            \end{align*}
+        Given any $[f]\in\pi_1(X,x)$:
+            \begin{align*}
+                (\psi\circ\varphi)_{*}([f])&=[(\psi\circ\varphi)\circ f]\\
+                &=[\psi\circ(\varphi\circ f)]\\
+                &=\psi_{*}[\varphi\circ f]\\
+                &=\psi_{*}(\varphi_{*}(f))\\
+                &=(\psi_{*}\circ\varphi_{*})([f])\\
+            \end{align*}
+        Given any $[f]\in\pi_1(X,x)$:
+            \begin{align*}
+                id_{*}([f])&=[id\circ f]\\
+                &=[f]\\
+            \end{align*}
+    \end{proof}
+    \begin{theorem} if $\varphi: X\rightarrow Y$ is a homeomorphism,
+        then $\varphi_{*}: \pi_{1}(X,x)\rightarrow\pi_{1}(Y,y)$
+        is an isomorphism.
+    \end{theorem}
+        \begin{proof}
+            We already know that $\varphi_{*}$ is a homomorphism, to prove that it's
+            a bijection, we'll find an inverse to $\varphi_{*}$. Claim that,
+            \begin{align*}
+                (\varphi)_{*}:\pi_1(Y,\varphi(x))\rightarrow\pi_1(X,x)\\
+            \end{align*}
+            is the inverse to $\varphi_{*}$.\\
+            (Note that this is doable, because $\varphi$ is a homeomorphism, $\varphi^{-1}:Y\rightarrow X$ exists, and is continuous)\\
+            To check this:
+            \begin{align*}
+                \varphi_{*}\circ (\varphi^{-1})
+                &=(\varphi\circ\varphi^{-1}),\ \text{by lemma 1 shown today}\\
+                &=id_{*},\ \text{by definition of $\varphi^{-1}$ (identity on y)}\\
+                &=id,\ \text{by lemma 2 shown today (identity on x)}\\
+                (\varphi^{-1})_{*}\circ\varphi_{*}&=(\varphi^{-1}\circ\varphi)_{*}=id_{*}=id\\
+            \end{align*}
+            This by definition means $\varphi_{*}$ and $(\varphi^{-1})_{*}$ are inverse functions.
+            Additionally, this small red box has made it onto the board, for clarification.
+            \begin{align*}
+                id_x&: X \rightarrow Y\\
+                id_{\pi_1(X,x)}&:\pi_1(X,x)\rightarrow\pi_1(X,x)\\
+                \text{Lemma: }&(id_{x})_{*}id_{\pi_1(X,x)}\\
+            \end{align*}
+        \end{proof}
+    \begin{itemize}
+        \item
+            This ends up proving that,
+            \begin{align*}
+                X\cong Y\implies\pi_1(X,x)\cong\pi_1(Y,\varphi(x))\\
+            \end{align*}
+            But, non-homeomorphic spaces \underline{can} have isomorphic $\pi_{1}$\\
+            \underline{Ex:}
+            \begin{align*}
+                X&=.\\
+                Y&=\R^2\\
+            \end{align*}
+            These are not homeomorphic, clearly X is compact and Y isn't, but their fundamental groups are
+            isomorphic, since the fundamental group of $X$ is just $\{1\}$, and clearly this is also true
+            about $\R^2$
+        \item So, given $X$ and $Y$, how can we tell if $\pi_1(X)\cong\pi_1(Y)$?
+    \end{itemize}
+    \subsubsection{Homotopy of Maps:}
+        \begin{definition} Let $f: X\rightarrow Y$ and $g: X\rightarrow Y$ be continuous functions.
+        Then a \underline{homotopy} from $f$ to $g$ is a continuous function,
+        \begin{align*}
+            H: X\times I\rightarrow Y\\
+        \end{align*}
+        such that,
+        \begin{align*}
+            H(x,0)=f(x),\ \forall x\in X\\
+            H(x,1)=f(x),\ \forall x\in X\\
+        \end{align*}
+        Our goal is to make remark about the lower star versions of these maps, given their being homotopic.
+        \end{definition}

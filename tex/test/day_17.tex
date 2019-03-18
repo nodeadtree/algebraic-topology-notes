@@ -1,0 +1,118 @@
+\subsection{Day 17}
+\subsubsection{Homotopy Equivalence}
+\begin{itemize}
+    \item \underline{Goal:} A homotopy equivalence induces an isomorphism on $\pi_1$
+    \item This follows from:
+\end{itemize}
+\begin{theorem}
+    If $f: X\rightarrow Y$ and $g: X\rightarrow Y$ are continuous, $f\cong g$ (homotopic),
+    \[
+        f(x_0)=y_0,\ g(x_0)=y_1
+    \]
+    Then there exists a path, $\alpha$ from $y_0$ to $y_1$ such that 
+    $g_* = \hat{\alpha}\circ f_*$.\\
+    \underline{Schematically:}
+    \[
+        \underbrace{\pi_1(X,x_0)\xrightarrow{f_*}\pi_1(Y,y_0)
+            \xrightarrow{\hat{{\alpha}}}\pi_1{Y,y_1}}_{g_*}
+    \]
+\end{theorem}
+    \begin{proof}
+        Let
+        \[
+            H:X\times I \rightarrow Y
+        \]
+        be a homotopy from $f$ to $g$ (I.e, $h_t:X \rightarrow Y,\ \forall t\in I$).
+        Let,
+        \begin{align*}
+            \alpha: I \rightarrow Y\\
+            \alpha(t)=h_t(x_0)\\
+        \end{align*}
+        Note that we want,
+        \begin{align*}
+            \forall [\gamma] &\in \pi_1(X,x_0):\\
+            g_*([\gamma])&=\hat\circ f_*([\gamma])\\
+            \iff [g\circ \gamma]&=[\overline{\alpha}*(f\circ \gamma)*\alpha]\\
+            \iff g\circ \gamma&\cong \overline{\alpha}*(f\circ \gamma)*\alpha\\
+        \end{align*}
+        We'll prove these are path homotopic by interpolating between them by the following
+        loops: (There's some drawing that goes here)
+        Explicitly, let,
+        \begin{align*}
+            \beta_{t}&: I \rightarrow Y\\
+            \beta_{t}(s)&=\overline{\alpha}((1-t)s)\\
+        \end{align*}
+        Then,
+        \begin{align*}
+            \beta_{0}&=\overline{\alpha}\\
+            \beta_{1}&=e_{y_1}\\
+            \beta_{t}&=\text{path from $y_1$ fo $\alpha(t)$}\\
+        \end{align*}
+        Now, define the followin loop at $y_1$:
+        \begin{align*}
+            \beta_{t}*(h_t\circ \gamma)* \overline{\beta_{t}}\\
+        \end{align*}
+        This is:
+        \begin{enumerate}
+            \item When $t=0$:
+                \[
+                    \beta_{0}*(h_0\circ \gamma)*\overline{\beta_0}
+                    =\overline{\alpha}*(f\circ \gamma)*\alpha
+                \]
+                (this is the green loop from the hard to see picture)
+            \item When $t=1$:
+                \[
+                    \beta_{1}*(h_1\circ \gamma)*\overline{\beta_1}
+                    =e_{y_{1}}*(f\circ \gamma)*e_{y_{1}}
+                \]
+        \end{enumerate}
+        Thus, $\beta_{t}*(h_t\circ \gamma)*\overline{\beta_t}$ give a path homotopy,
+        \[
+                    \overline{\alpha}*(f\circ \gamma)*\alpha
+                    \cong_p e_{y_{1}}*(f\circ \gamma)*e_{y_{1}}
+                    \cong_p g \circ \gamma\\
+        \]
+    \end{proof}
+    \begin{corollary}
+        If $f: X\rightarrow Y$ is a homotopy equivalence
+        (recall that this means there exists a $g:Y\rightarrow X$ such that 
+        $f\circ g\cong id_Y$ and $g\circ f\cong id_X$). Then,
+        \[
+            f_*: \pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)
+        \]
+        is an isomorphism.
+        \begin{proof}
+            We know,
+            \begin{align*}
+                g\circ f \cong id_X\\
+                \xRightarrow[\text{theorem}]\ (g\circ f)_*
+                =\hat{\alpha}\circ (id_X)_*, \text{ for some path $\alpha $ }\\
+                \Rightarrow g_*\circ f_* = \hat{\alpha}\\
+            \end{align*}
+            and similarly,
+            \begin{align*}
+                f\circ g\cong id_Y\\
+                (f\circ g) = \hat{\beta}\circ (id_Y)_* \text{ for some path in $\beta $ }\\
+                \rightarrow f_* \circ g_* = \hat{\beta}\\
+            \end{align*}
+            Thus, if $f(x_0)=y_0$, $g(y_0)=x_1$, $f(x)=y_1$:\\
+            \begin{center}
+                \begin{tikzcd}
+                    \pi_1(X,x_0) \arrow[d, "\hat{\alpha}"] \arrow[r, "f_*"]& \pi_1(Y,y_0) 
+                    \arrow[ld, "g_*"'] \arrow[d, "\hat{\beta}"]\\
+                    \pi_1(X,x_1)\arrow[r, "f_*"] &\pi_1(Y,y_1)\\
+                \end{tikzcd}\\
+            \end{center}
+            (Some fuckin arrow diagram Ah fuck)
+            Therefore,
+            \begin{align*}
+                g_*\circ f_* = \hat{\alpha}, \text{ an isomorphism! }\\
+                \Rightarrow g_* \text{ is surjective}\\
+            \end{align*}
+            And similarly, because
+            \begin{align*}
+                f_*\circ g_* = \hat{\beta} \text{ (an isomorphism!) }\\
+                \rightarrow g_* \text{ is injective}
+            \end{align*}
+        \end{proof}
+    \end{corollary}

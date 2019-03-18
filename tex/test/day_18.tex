@@ -1,0 +1,107 @@
+\subsection{Day 18}
+\subsubsection{Homotopy equivalences, concluded}
+Recall,
+\begin{definition}
+    A continuous function $f:X\rightarrow Y$ is a \underline{homotopy equivalence} if there exists
+    a continuous function $g:Y\rightarrow X$ such that $g\circ f\simeq id_x$ and $f\circ g \simeq id_Y$\\
+
+\end{definition}
+    \underline{Notation/terminology:}
+    We call $g$ a \underline{homotopy inverse} of $f$ if there exists a homotopy equivalence,
+    $f:X\rightarrow Y$, we say $X$ and $Y$ are \underline{homotopy equivalent} and we write $X\simeq Y$
+    \begin{enumerate}
+        \item \underline{Ex:}
+            \begin{align*}
+                f&: \R^2\setminus\{(0,0)\}\rightarrow S^{1}\\
+                f(x,y)&=(\frac{x}{\sqrt{x^2+y^2}},\frac{y}{\sqrt{x^2+y^2}})\\
+            \end{align*}
+            is a homotopy equivalence with homotopy inverse,
+            \begin{align*}
+                i&: S^{1}\rightarrow R^2\setminus\{(0,0)\}\\
+                i(x,y)&=(x,y)\\
+            \end{align*}
+            To check these are homotopy inverses:
+            \begin{align*}
+                f\circ i &= id_{S^1}\\
+                (i\circ f)(x,y)&=(\frac{x}{\sqrt{x^2+y^2}},\frac{y}{\sqrt{x^2+y^2}})\\
+            \end{align*}
+            So a homotopy between $f\circ i$ and $id_{S^{1}}$ is,
+            \begin{align*}
+                H&:S^{1}\times I\rightarrow S^{1}\\
+                H((x,y),t)&=(x,y),\ \forall t\in I\\
+            \end{align*}
+            A homotopy between $i\circ f$ and $id_{\R^2\setminus\{(0,0)\}}$ is the straight line homotopy. This is
+            the deformation retraction.
+        \item \underline{Ex:} Let,
+            \begin{align*}
+                D&=\{(x,y)\in \R^2| x^2+y^2\leq 1\}\\
+            \end{align*}
+            Then,
+            \begin{align*} 
+                f&: D\rightarrow \{(0,0)\}\\
+                f(x,y)&=(0,0)\\
+            \end{align*}
+            is a homotopy equivalence with homotopy inverse,
+            \begin{align*}
+                i&: \{(0,0)\}\rightarrow D\\
+                i(0,0)&=(0,0),\ \text{(inclusion)}\\
+            \end{align*}
+            To check these are homotopy inverses:
+            \begin{align*}
+                f\circ i &= id_{\{(0,0)\}}\\
+                (i\circ f)(x,y)&=(0,0)\\
+            \end{align*}
+            So, a homotopy betwen $i\circ f: D \rightarrow D$ and $id: D\rightarrow D$ is
+            \begin{align*}
+                H&: D\times I \rightarrow D\\
+                H((x,y), t)&=((1-t)x, (1-t)y)\\
+            \end{align*}
+            This is the straight-line homotopy and it is the deformation retraction of $D$
+            onto $\{(0,0)\}$
+        \item \underline{Note:}(HW) Any deformation retraction of $X$ onto $A$
+            gives rise to a homotopy equivalence $X\simeq A$\\
+            (Note that this side box was created at some point.
+            $H:X\times I \rightarrow X$ a homotopy from $id_X:X\rightarrow X$
+            to $r:X\rightarrow X$ such that $r(x)\in A,\ \forall x\in X$)
+    \end{enumerate}
+    \begin{definition}
+        If a topological space $X$ is homotopy equivalent to a single point, we say that $X$ is \underline{contractible}.
+    \end{definition}
+    \begin{enumerate}
+        \item\underline{Ex:} The unit disk, $D$ is retractible.
+        \item \underline{Note:} By the theorem from last class,
+            \[
+                \text{contractible}\Rightarrow \text{simply-connected}
+            \]
+    \end{enumerate}
+    \subsection{Why care about homotopy equivalences?}
+    Why do we care about homotopy equivalences instead of just using deformation retractions?
+        \begin{enumerate}
+            \item Deformation retraction is weirdly asymmetric. $A$ is a deformation
+                retraction of $X$ but not vice versa, while homotopy equivalence is
+                an equivalence relation (courtesy of HW). The fact that it's symmetric
+                \begin{itemize}
+                    \item {Ex:}
+                        \begin{align*}
+                            D\underbrace{\simeq}_{\text{last example}}& \{.\}
+                            \underbrace{\simeq}_{\text{handout}} \R\\
+                            \Rightarrow D&\simeq \R\\
+                            \Rightarrow \pi_1(D)&\cong \pi_1(\R)\\
+                        \end{align*}
+                    \item {Ex:}
+                        Looking at the character $\theta$,
+                        \begin{align*}
+                            \theta
+                            \underbrace{\simeq}_{\text{deformation retraction}}
+                            &\R^2\setminus{x,y}
+                            \underbrace{\simeq}_{\text{deformation retraction}}
+                            \infty\\
+                            \Rightarrow \theta &\cong \infty\\
+                            \Rightarrow \pi_1(\theta)&\cong \pi_1(\infty)\\
+                        \end{align*}
+                \end{itemize}
+            \item We don't have to worry about base points staying fixed throughout the
+                homotopy.
+        \end{enumerate}
+        
+

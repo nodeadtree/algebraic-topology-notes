@@ -1,0 +1,105 @@
+\documentclass[../notes.tex]{subfiles}
+\begin{document}
+\section{Day 20}
+\subsection{Free products continued}
+\begin{itemize}
+    \item \underline{Question:} Let,
+        \begin{align*}
+            G=\{\dots,a^{-2},a^{-1}a^{0},a^{1}a^{2},\dots \}\\
+            H=\{\dots,b^{-2},b^{-1}b^{0},b^{1}b^{2},\dots \}\\
+        \end{align*}
+        These are both groups under multiplication and they're isomorphic.
+        \begin{itemize}
+            \item To what ``familiar'' group are $G$ and $H$ isomorphic.
+            \item What do elements of $G*H$ look like?
+        \end{itemize}
+    \item \underline{Answer:}
+        \begin{itemize}
+            \item 
+                \[
+                    G\cong H \cong Z
+                \]
+                (via the isomorphism, $a^i\rightarrow i$ or $b^i \rightarrow i$)
+            \item
+                Elements of $G*H$ look like,
+                \[
+                    a^{i_1}b^{j_1}a^{i_2}b^{j_2}\dots a^{i_n}b^{j_n}
+                \]
+                (Where $i_k, j_k\in \Z$)\\
+                This might start with $b^{j_1}$ or it might end with $a^{j_n}$
+        \end{itemize}
+    \item \underline{Observation:}
+\end{itemize}
+\subsubsection{Free Products with Amalgamation}
+\begin{itemize}
+    \item Let $G_1, G_2$ and $H$ be groups, and let,
+        \begin{align*}
+            \varphi_1:H \rightarrow G_1\\
+            \varphi_2:H \rightarrow G_2\\
+        \end{align*}
+        be homomorphisms\\
+        \begin{center}
+            \begin{tikzcd}
+                G_1 & & G_2\\
+                & H \arrow[ul, "\varphi_1"] \arrow[ur, "\varphi_2"] & \\
+            \end{tikzcd}
+        \end{center}
+    \item \underline{Observation:} $\varphi_1$ and $\varphi_2$ induce homomorphisms,
+        \begin{align*}
+            \tilde{\varphi_1}:H\rightarrow G_1*G_2\\
+            \tilde{\varphi_1}= \text{ the word that just contains $\varphi_1(h)$ }\\
+        \end{align*}
+        and,
+        \begin{align*}
+            \tilde{\varphi_2}:H\rightarrow G_1*G_2\\
+            \tilde{\varphi_2}= \text{ the word that just contains $\varphi_2(h)$ }\\
+        \end{align*}
+\end{itemize}
+\begin{definition}
+    The \underline{free product of $G_1$ and $G_2$ amalgamated over $H$} is,
+    \begin{align*}
+        G_1*_{H}:= \frac{G_1*G_2}{N}\\
+    \end{align*}
+    where N is the smallest normal subgroup of $G_1*G_2$ containing $\tilde{\varphi_1}(h)\tilde{\varphi_2}(h)^{-1},\ \forall h\in H$
+\end{definition}
+\begin{itemize}
+    \item \underline{Think:} We're setting,
+        \begin{align*}
+            \tilde{\varphi_1}(h)\tilde{\varphi_2}(h)^{-1}=1\\
+            \iff \tilde{\varphi_1}(h)=\tilde{\varphi_2}(h)\\
+        \end{align*}
+        (the sorts of things in $N$ are $a\tilde{\varphi_1}(h)\tilde{\varphi_2}(h)^{-1}a^{-1}$, e.g.)
+    \item \underline{Note:} The notation $G_1*G_2$ doesn't mention $\varpi_1$ and $\varphi_2$
+        but it depends on them!
+    \item \underline{Ex:}
+        \begin{align*}
+            G_1=\inpr{a}\\
+            G_2=\{1\}\\
+            H=\inpr{b}\\
+        \end{align*}
+        Let's form
+        \[
+            G_1*_{H}G_2\\
+        \]
+        where the amalgamation happens over the homomorphisms.
+        \begin{align*}
+            \varphi_1: \inpr{b}\rightarrow\inpr{a}\\
+            \varphi_1(b^i)=a^{2i}\\
+        \end{align*}
+        and
+        \begin{align*}
+            \varphi_2: \inpr{b}\rightarrow\{1\}\\
+            \varphi_2(b^i)=1\\
+        \end{align*}
+        Then,
+        \begin{align*}
+            G_1*_{H}G_2=\frac{G_1*G_2}{
+                \text{smallest nomal subgroup containing $\varphi_1(h)\varphi_2^{-1}(h)
+                    \forall h\in H$
+                }
+            }\\
+            =\frac{\inpr{a}}{\dots \text{containing $a^2 1\forall i\in \Z$}}=
+            \frac{\inpr{a}}{\inpr{a^2}}\\
+        \end{align*}
+\end{itemize}
+\end{document}
