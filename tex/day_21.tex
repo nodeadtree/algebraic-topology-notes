@@ -1,0 +1,88 @@
+\documentclass[../notes.tex]{subfiles}
+\begin{document}
+\section{Day 21}
+\subsection{Van Kampen Theorem}
+\begin{theorem}
+    Let $X$ be a topological space such that,
+    \[
+        X=U\cup V
+    \]
+    where $U,V$ and $U\cap V$ are all open, path-connected, subsets
+    of $X$. Let $x_0\in U\cap V$. Then,
+    \[
+        \pi_1(X,x_0)\cong\pi_1(U,x_0)*_{\pi_1(U\cap V, x_0)}
+        \pi_1(V,x_0)
+    \]
+    Where amalgamation happens over the homomorphisms
+    \[
+        i_{U*}:\pi_1(U\cap V, x_0)\rightarrow \pi_1(U, x_0)
+    \]
+    induced by the inclusion $i_U: U\cap V \rightarrow U$, and
+    the homomorphism
+    \[
+        i_{V*}:\pi_1(U\cap V, x_0)\rightarrow \pi_1(V, x_0)
+    \]
+    induced by the inclusion $i_V: U\cap V \rightarrow V$.\\
+    \begin{center}
+        \begin{tikzcd}
+            &\pi_1(U,x_0)\arrow[rrd, "j_1"]\arrow[rrrd, bend left=20, "k_1"]& & &\\
+            \pi_1(U\cap V, x_0) \arrow[rd, "i_{V*}"] \arrow[ru, "i_{U*}"]& &
+            &\pi_1(U,x_0)*_{\pi_1(U\cap V, x_0)}
+            \pi_1(V,x_0)\arrow[r, "\phi"]& \pi_1(X,x_0)\\
+            &\pi_1(V,x_0)\arrow[rru, "j_2"]\arrow[rrru, bend right=20, "k_2"]& & &\\
+        \end{tikzcd}
+    \end{center}
+\end{theorem}
+\begin{itemize}
+    \item \underline{Ex:}(Algebra) $\Z*_{\{1\}}\Z$, where the amalgamation happens
+        over the homomorphisms,
+        \begin{align*}
+            \varphi_1: \{1\} \rightarrow \Z,\ \text{(trivial homomorphism)}\\
+            \varphi_2: \{1\} \rightarrow \Z,\ \text{(trivial homomorphism)}\\
+        \end{align*}
+        (The trivial homomorphism just sends everything to the identity)
+        By definition,
+        \begin{align*}
+            \Z*_{\{1\}}\Z &= \frac{\Z * \Z}{
+                \underbrace{\text{smallest normal subgroup containing $
+                    \tilde{\varphi}_1(h)\tilde{\varphi}_2^{-1}(h)\forall h\in\{1\}$
+                }
+                }_{\tilde{\varphi}_1(1)\tilde{\varphi}_2^{-1}(1)=a^0(b^0)^{-1}=1}
+            }\\
+            &=\frac{\inpr{a,b}}{\{1\}}\\
+            &=\underbrace{\inpr{a,b}}_{\text{Free group on two generators}}
+        \end{align*}
+        In general, if $\varphi_1:H\rightarrow G_1$, then, 
+        $\tilde{\varphi}_1:H\rightarrow G_1 * G_2$, and 
+        \[
+            \tilde{\varphi}(h)=\text{the word $\varphi_1(h)$ viewed as a word of length 1}
+        \]
+    \item \underline{Ex:} (Topology), Note that there's a picture that should be here.
+        One of these days I'll go through my notes and add all the missing drawings. Probably
+        not gonna do that on the 19th of march though.
+        \begin{align*}
+            X = \text{Drawing of figure 8}&=\{(x,y)\in \R|(x-1)^2+y^2=1\}\cup
+            \{(x,y)\in \R|(x+1)^2+y^2=1\}\\
+            U&=\{(x,y)\in X|X\le 1\}\\
+            V&=\{(x,y)\in X|X\ge -1\}\\
+        \end{align*}
+        Let $x_0=(0,0)$. Then, drawings, but mostly the following junk.
+        \begin{align*}
+            U\simeq S^1\implies \pi_1(U, x_0)\cong \Z\\
+            V\simeq S^1\implies \pi_1(V, x_0)\cong \Z\\
+            U\cap V\simeq \{(0,0)\}\implies \pi_1(V, x_0)=\{1\}\\
+        \end{align*}
+        So, the Van Kampen Theorem says,
+        \[
+            \pi_1(X,x_0)=\Z*_{1}\Z=\inpr{a,p}
+        \]
+        Pictorially, an element of $\pi_1(X,x_0)$ may look like some as yet undrawn
+        picture or,
+        \[
+            a^3b^5a^{-2}
+        \]
+        Where $a^1$ corresponds to a clockwise loop around one portion of the figure 8,
+        a $a^{-1}$ corresponds to a counterclockwise loop around that same portion, and
+        switching to $b^1$ or $b^{-1}$ switches which portion of the figure 8 the loop will be around.
+\end{itemize}
+\end{document}
