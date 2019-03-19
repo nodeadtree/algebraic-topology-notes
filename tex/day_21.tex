@@ -84,5 +84,44 @@
         Where $a^1$ corresponds to a clockwise loop around one portion of the figure 8,
         a $a^{-1}$ corresponds to a counterclockwise loop around that same portion, and
         switching to $b^1$ or $b^{-1}$ switches which portion of the figure 8 the loop will be around.
+    \item \underline{Ex:}(Algebra) 
+        \[
+            \{1\}*_H\{1\}
+        \]
+        Where the amalgamation happens over the homomorphisms,
+        \begin{align*}
+            \varphi_1&: H \rightarrow \{1\}\\
+            \varphi_1(h)&=1,\ \forall h\in H\\
+            \varphi_2&: H \rightarrow \{1\}\\
+            \varphi_2(h)&=1,\ \forall h\in H\\
+        \end{align*}
+        Then by definition,
+        \begin{align*}
+            \{1\}*_H\{1\}=\frac{\{1\}*\{1\}}{\text{smallest normal subgroup stuff}}
+            =\frac{\{1\}}{\dots}=\{1\}\\
+        \end{align*}
+    \item \underline{Ex:} (Topology)
+        \begin{align*}
+            S^2=\{(x,y,z)\in \R^3| x^2+y^2+z^2=1\}\\
+        \end{align*}
+        Again, a drawing is referenced. I should learn how to draw quickky. We select
+        our two subsets of $X$ as such,
+        \begin{align*}
+            U = \{(x,y,z)\in X| Z\ge \frac{-1}{2}\}\\
+            V = \{(x,y,z)\in X| Z\le \frac{1}{2}\}\\
+        \end{align*}
+        We let $x_0=(0,0,0)$, from the drawing we kinda see,
+        \begin{align*}
+            U\simeq \{.\}\implies \pi_1(U,x_0)\cong \{1\}\\
+            V\simeq \{.\}\implies \pi_1(V,x_0)\cong \{1\}\\
+            U\cap V \simeq S^1\ \text{
+                (by deformation retract)
+            }\implies\pi_1(U\cap V,x_0)\cong \Z\\
+        \end{align*}
+        So, the Van Kampen theorem says,
+        \begin{align*}
+            \pi_1(S^2, x_0)\cong\{1\}*_{\Z}\{1\}=\{1\}\\
+        \end{align*}
+        Which implies that any 1-loop on the sphere can be contracted to a single point.
 \end{itemize}
 \end{document}
