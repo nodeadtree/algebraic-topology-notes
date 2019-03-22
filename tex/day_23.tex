@@ -1,0 +1,106 @@
+\documentclass[../notes.tex]{subfiles}
+\begin{document}
+\section{Day 23}
+\subsection{Conclusion of Van Kampen}
+\begin{itemize}
+    \item \underline{Recall:}
+        Proving the following,
+        \[
+            \pi_1(X)\cong \frac{\pi_1(U)*\pi_1(V)}{N}
+        \]
+        Where,
+        \[
+            N=\text{Smallest normal subgroup containing $i_{U*}(h)i_{V*}^{-1}(h)\forall h\in\pi_1(U\cap V)$}
+        \]
+        Using
+        \[
+            j:\pi_1(U)*\pi_1(V)\rightarrow \pi_1(X)
+        \]
+        induced by the homomorphisms
+        \begin{align*}
+            j_{U*}:\pi_1(U)\rightarrow \pi_1(X)
+            j_{V*}:\pi_1(V)\rightarrow \pi_1(X)
+        \end{align*}
+        So far, we proved
+        \begin{enumerate}
+            \item j is surjective
+            \item $N\subseteq ker(j)$
+        \end{enumerate}
+        For step 3, we need to show that $ker(j)\subseteq N$, then we're
+        finished by the first isomorphism theorem.
+    \item \underline{Idea of proof} Let,
+        \[
+            w=[w_1][w_2]...[w_k]\in ker(j)
+        \]
+        This means if we define
+        \[
+            f_i = \begin{cases}
+                j_U*w_i & \text{ if} [w_i]\in \pi_1(U)\\
+                j_V*w_i & \text{ if} [w_i]\in \pi_1(V)\\
+            \end{cases}
+        \]
+        Then,
+        \begin{align*}
+            \underbrace{[f_1*f_2*\dots*f_k]}_{\text{this is $j(w)$}}=[e_{x_0}]\\
+            \iff f_1*\dots*f_k\cong_{p}e_{x_0}\\
+        \end{align*}
+        We want, $w\in N$
+        First, we define a ``move'' on words $w\in \pi_1(U)*\pi_1(V)$:
+        \begin{itemize}
+            \item If $[w_i]\in \pi_1(U)$, but $w_i$ actually lives in $U\cap V$, 
+                then view $[w_i]\in\pi_1(V)$ instead. (or vice versa)
+        \end{itemize}
+        This amounts to multiplying $w$ by an element of $N$! Why though?
+        ``[w_i]\in \pi_1(U) but $w_i$ actually lies in $U\cap V$''
+        means,
+        \[
+            [w_i]=i_{U*}([\tilde{w}_i])\text{ for some $[\tilde{w}_i]\in \pi_1(U\cap V)$ }
+        \]
+        ``view $[w_i]\in \pi_1(V)$ instead'', means to replace $[w_i]$ by 
+        $[w^{\prime}=i_{V*}([\tilde{w}_i])]$, Thus, a move means,
+        \begin{align*}
+            w=[w_1][w_2]\dots\underbrace{[w_i]}_{=i_{U*}([\tilde{w}_i])}\dots[w_k]\rightsquigarrow 
+            [w^{\prime}_1][w^{\prime}_2]\dots\underbrace{[w^{\prime}_i]}_{=i_{V*}([\tilde{w}_i])}\dots[w^{\prime}_k]
+        \end{align*}
+        To get from LHS to RHS, multiply $w$ by
+        \[
+            ([w_{i+1}]\dots[w_{k}])i_{U*}^{-1}([\tilde{w}_i])i_{V*}([\tilde{w}_i])([w_{i+1}]\dots[w_k])
+        \]
+        This is an element of $N$.
+        From here, we use the path homotopy,
+        \[
+            f_1*\dots f_k\cong_{p}e_{x_0}
+        \]
+        to cook up a sequence of moves taking $w$ to $[e_{x_0}]$. This means
+        \begin{align*}
+            w(\text{something in $N$})\\
+            \Rightarrow w\in N\\
+        \end{align*}
+    \item \underline{Wrapup of $\pi_1$}
+        Where do we go from here?
+        \begin{itemize}
+            \item \underline{Knot theory:} A ``knot'' in $\R^3$ is $K:I\rightarrow \R^3$ such that,
+                $K(0)=K(1)$ but $K_{|_{(0,1)}}$ is injective.\\
+                That is to say that two knots, $K_0$ and $K_1$ in $\R^3$ are \underline{equivalent} if there exists a family
+                of homeomorphisms
+                \[
+                    h_t:\R^3\rightarrow \R^3\\
+                \]
+                such that $h_0=id$ and $h_0\circ K_0=K_1$\\
+                Turns out that you can use $\pi_1(\R^3\setminus im(K))$ in a sneaky way to
+                detect if two knots are equivalent.
+            \item \underline{The Fundamental Theorem of Algebra:} This can be proven with the
+                fundamental group. Has a proof via $\pi_1$ that involves viewing a polynomial with no roots in $\C$ as
+                a map
+                \[
+                    p: \C \rightarrow \C\{0\}
+                \]
+                and arguing,
+                \[
+                    p_{*}([\text{some loop}])\neq 1
+                \]
+                Which yields a contradiction because $\pi_1(\C)=\{1\}$
+            \item Siilar ideas prove Borsuk-Ulam Theorem and Hairy Ball Theorem, and yadda yadda yadda.
+        \end{itemize}
+    \end{itemize}
+\end{document}
