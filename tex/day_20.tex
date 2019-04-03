@@ -3,6 +3,11 @@
 \section{Day 20}
 \subsection{Free products continued}
 \begin{itemize}
+    \item Recall:
+        \begin{align*}
+            G*H=\{\text{reduced words in $G$ and $H$}\}\\
+        \end{align*}
+        which is a group under concatenation followed by reduction.
     \item \underline{Question:} Let,
         \begin{align*}
             G=\{\dots,a^{-2},a^{-1}a^{0},a^{1}a^{2},\dots \}\\
@@ -29,6 +34,16 @@
                 This might start with $b^{j_1}$ or it might end with $a^{j_n}$
         \end{itemize}
     \item \underline{Observation:}
+        Though $H$ and $G$ are abelian in this example, $G*H$ is not abelian.
+        Both $1_H\in G*H$ and $1_G\in G*H$ reduce to $0$\\
+        \[
+            G*H\cong \Z*\Z
+        \]
+        This example is called the ``free group with two generators'', and
+        is denoted,
+        \[
+            \inpr{g,h}
+        \]
 \end{itemize}
 \subsubsection{Free Products with Amalgamation}
 \begin{itemize}
