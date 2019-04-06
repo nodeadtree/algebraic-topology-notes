@@ -77,7 +77,7 @@
                         \draw[->] [color=blue](2,3) node [left] {$A$} -- (6,2.75)
                         node [right]{$f(A)$};
                         \draw[->] [color=red](2,.75) node [left] {$B$} -- (6,.75)
-                        node [right]{$f(B)$};
+                        node [right]{$g(B)$};
                         \draw[->] [color=violet,thick](2.5,2) node [left] {$A\cap B$} --
                         (5.3,1.75) node [right] {\small{$f(A\cap B)$}};
                         \draw [color=red,thick] (2,1) circle(1.5cm);
@@ -171,12 +171,96 @@
             \end{align*}\\
             \begin{minipage}[c]{\linewidth}
                 \begin{center}
-                    \includegraphics[width=\linewidth]{images/homotopy_class_concat.png}
+                    \begin{tikzpicture}
+                        \begin{axis}[
+                            width=\linewidth, height=8cm,
+                            ticks=none
+                            ]
+                            \addplot [samples=200,color=orange, thick, domain=0:1]{
+                                cos(deg(4*x+.5))
+                            };
+                            \addplot [samples=200,color=orange, thick, domain=0:1]{
+                                .8*(cos(deg(4*x+.5)))+.2*(.878*e^(-(x^2)/.4)-.283*x)
+                            };
+                            \addplot [samples=200,color=orange, thick, domain=0:1]{
+                                .6*(cos(deg(4*x+.5)))+.4*(.878*e^(-(x^2)/.4)-.283*x)
+                            };
+                            \addplot [samples=200,color=orange, thick, domain=0:1]{
+                                .4*(cos(deg(4*x+.5)))+.6*(.878*e^(-(x^2)/.4)-.283*x)
+                            };
+                            \addplot [samples=200,color=orange, thick, domain=0:1]{
+                                .2*(cos(deg(4*x+.5)))+.8*(.878*e^(-(x^2)/.4)-.283*x)
+                            };
+                            \addplot [samples=200,color=orange, thick, domain=0:1]{
+                                .878*e^(-(x^2)/.4)-.283*x
+                            } node [above right, pos=.5] {$[f]$};
+                            \addplot [samples=200,color=teal, thick, domain=1:2]{
+                                cos(deg(4*x+.5))/(x^2)
+                            };
+                            \addplot [samples=200,color=teal, thick, domain=1:2]{
+                                .8*(cos(deg(4*x+.5))/(x^2))+.2*(((x-1.5)^2)-.461+(x-1)*.0605)
+                            };
+                            \addplot [samples=200,color=teal, thick, domain=1:2]{
+                                .6*(cos(deg(4*x+.5))/(x^2))+.4*(((x-1.5)^2)-.461+(x-1)*.0605)
+                            };
+                            \addplot [samples=200,color=teal, thick, domain=1:2]{
+                                .4*(cos(deg(4*x+.5))/(x^2))+.6*(((x-1.5)^2)-.461+(x-1)*.0605)
+                            };
+                            \addplot [samples=200,color=teal, thick, domain=1:2]{
+                                .2*(cos(deg(4*x+.5))/(x^2))+.8*(((x-1.5)^2)-.461+(x-1)*.0605)
+                            };
+                            \addplot [samples=200,color=teal, thick, domain=1:2]{
+                                ((x-1.5)^2)-.461+(x-1)*.0605
+                            } node [below right, pos=.5] {$[g]$};
+                        \end{axis}
+                    \end{tikzpicture}
                 \end{center}
             \end{minipage}\\
             \begin{minipage}[c]{\linewidth}
                 \begin{center}
-                    \includegraphics[width=\linewidth]{images/homotopy_class_concat_2.png}
+                    \begin{tikzpicture}
+                        \begin{axis}[
+                            width=\linewidth, height=8cm,
+                            ticks=none
+                            ]
+                            \addplot [samples=200,color=violet, thick, domain=0:1]{
+                                cos(deg(4*x+.5))
+                            };
+                            \addplot [samples=200,color=violet, thick, domain=0:1]{
+                                .8*(cos(deg(4*x+.5)))+.2*(.878*e^(-(x^2)/.4)-.283*x)
+                            };
+                            \addplot [samples=200,color=violet, thick, domain=0:1]{
+                                .6*(cos(deg(4*x+.5)))+.4*(.878*e^(-(x^2)/.4)-.283*x)
+                            };
+                            \addplot [samples=200,color=violet, thick, domain=0:1]{
+                                .4*(cos(deg(4*x+.5)))+.6*(.878*e^(-(x^2)/.4)-.283*x)
+                            };
+                            \addplot [samples=200,color=violet, thick, domain=0:1]{
+                                .2*(cos(deg(4*x+.5)))+.8*(.878*e^(-(x^2)/.4)-.283*x)
+                            };
+                            \addplot [samples=200,color=violet, thick, domain=0:1]{
+                                .878*e^(-(x^2)/.4)-.283*x
+                            } node [above right, pos=.7,] {$[f*g]$};
+                            \addplot [samples=200,color=violet, thick, domain=1:2]{
+                                cos(deg(4*x+.5))/(x^2)
+                            };
+                            \addplot [samples=200,color=violet, thick, domain=1:2]{
+                                .8*(cos(deg(4*x+.5))/(x^2))+.2*(((x-1.5)^2)-.461+(x-1)*.0605)
+                            };
+                            \addplot [samples=200,color=violet, thick, domain=1:2]{
+                                .6*(cos(deg(4*x+.5))/(x^2))+.4*(((x-1.5)^2)-.461+(x-1)*.0605)
+                            };
+                            \addplot [samples=200,color=violet, thick, domain=1:2]{
+                                .4*(cos(deg(4*x+.5))/(x^2))+.6*(((x-1.5)^2)-.461+(x-1)*.0605)
+                            };
+                            \addplot [samples=200,color=violet, thick, domain=1:2]{
+                                .2*(cos(deg(4*x+.5))/(x^2))+.8*(((x-1.5)^2)-.461+(x-1)*.0605)
+                            };
+                            \addplot [samples=200,color=violet, thick, domain=1:2]{
+                                ((x-1.5)^2)-.461+(x-1)*.0605
+                            };
+                        \end{axis}
+                    \end{tikzpicture}
                 \end{center}
             \end{minipage}
         \item \underline{Idea of proof of proposition:}\\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.26)  6 APR 2019 03:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.3.26)  6 APR 2019 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -811,70 +811,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--134
 
  []
 
-[7]
-<images/homotopy_class_concat.png, id=42, 407.6028pt x 215.3646pt>
-File: images/homotopy_class_concat.png Graphic file (type png)
-<use images/homotopy_class_concat.png>
-Package pdftex.def Info: images/homotopy_class_concat.png  used on input line 1
-74.
-(pdftex.def)             Requested size: 442.37993pt x 233.74374pt.
-<images/homotopy_class_concat_2.png, id=44, 336.7782pt x 186.4566pt>
-File: images/homotopy_class_concat_2.png Graphic file (type png)
-<use images/homotopy_class_concat_2.png>
-Package pdftex.def Info: images/homotopy_class_concat_2.png  used on input line
- 179.
-(pdftex.def)             Requested size: 442.37993pt x 244.93991pt.
- [8 <./images/homotopy_class_concat.png> <./images/homotopy_class_concat_2.png>
-]) (./tex/day_4.tex
-<images/association.png, id=50, 320.1561pt x 171.2799pt>
-File: images/association.png Graphic file (type png)
-<use images/association.png>
-Package pdftex.def Info: images/association.png  used on input line 26.
-(pdftex.def)             Requested size: 320.1553pt x 171.27948pt.
-<images/association_2.png, id=51, 310.0383pt x 181.3977pt>
-File: images/association_2.png Graphic file (type png)
-<use images/association_2.png>
-Package pdftex.def Info: images/association_2.png  used on input line 31.
-(pdftex.def)             Requested size: 310.03754pt x 181.39725pt.
- [9]
-<images/path_identity.png, id=55, 179.9523pt x 133.6995pt>
+[7] [8]) (./tex/day_4.tex [9]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 92.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+<images/path_identity.png, id=48, 179.9523pt x 133.6995pt>
 File: images/path_identity.png Graphic file (type png)
 <use images/path_identity.png>
-Package pdftex.def Info: images/path_identity.png  used on input line 45.
+Package pdftex.def Info: images/path_identity.png  used on input line 94.
 (pdftex.def)             Requested size: 179.95184pt x 133.69916pt.
- [10 <./images/association.png> <./images/association_2.png> <./images/path_ide
-ntity.png>]
-<images/path_inverse.png, id=62, 179.2296pt x 114.1866pt>
+[10]
+<images/path_inverse.png, id=53, 179.2296pt x 114.1866pt>
 File: images/path_inverse.png Graphic file (type png)
 <use images/path_inverse.png>
-Package pdftex.def Info: images/path_inverse.png  used on input line 62.
+Package pdftex.def Info: images/path_inverse.png  used on input line 111.
 (pdftex.def)             Requested size: 179.22914pt x 114.18631pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--69
+Underfull \hbox (badness 10000) in paragraph at lines 108--118
 
  []
 
-<images/loops.png, id=63, 155.3805pt x 97.5645pt>
+[11 <./images/path_identity.png> <./images/path_inverse.png>]
+<images/loops.png, id=59, 155.3805pt x 97.5645pt>
 File: images/loops.png Graphic file (type png)
 <use images/loops.png>
-Package pdftex.def Info: images/loops.png  used on input line 87.
+Package pdftex.def Info: images/loops.png  used on input line 136.
 (pdftex.def)             Requested size: 155.3801pt x 97.56424pt.
-[11 <./images/path_inverse.png> <./images/loops.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 97--99
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 152--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--113
+Underfull \hbox (badness 10000) in paragraph at lines 155--162
 
  []
 
-) (./tex/day_5.tex [12]) (./tex/day_6.tex
+) (./tex/day_5.tex [12 <./images/loops.png>]) (./tex/day_6.tex
 Underfull \hbox (badness 10000) in paragraph at lines 15--17
 
  []
@@ -890,12 +870,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--56
 
  []
 
-
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 58--60
 
  []
 
-[17]
+
 Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
@@ -905,7 +885,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--30
 
  []
 
-[22] [23]) (./tex/day_13.tex
+[22] [23] [24]) (./tex/day_13.tex
 Overfull \hbox (10.2435pt too wide) in paragraph at lines 9--14
 \T1/cmss/m/n/10.95 be a con-tin-u-ous func-tion such that $\OML/cmm/m/it/10.95 
 f\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/i
@@ -914,8 +894,8 @@ t/10.95 g\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95 ) = \OML
 \T1/cmss/m/n/10.95 and $\OML/cmm/m/it/10.95 g$ \T1/cmss/m/n/10.95 are $[]$. 
  []
 
-[24] [25] [26]) (./tex/day_14.tex [27]) (./tex/day_15.tex [28] [29])
-(./tex/day_16.tex) (./tex/day_17.tex [30] [31]
+[25] [26] [27]) (./tex/day_14.tex [28]) (./tex/day_15.tex [29] [30])
+(./tex/day_16.tex) (./tex/day_17.tex [31] [32]
 Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
@@ -925,35 +905,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
  []
 
-[32] [33]) (./tex/day_19.tex [34]
+[33] [34]) (./tex/day_19.tex [35]
 Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
-[35]) (./tex/day_20.tex
+[36]) (./tex/day_20.tex
 Underfull \hbox (badness 10000) in paragraph at lines 36--39
 
  []
 
-[36]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
-[37]) (./tex/day_21.tex
+[38]) (./tex/day_21.tex
 Underfull \hbox (badness 10000) in paragraph at lines 24--26
 
  []
 
-[38] [39]) (./tex/day_22.tex [40] [41]) (./tex/day_23.tex [42])
-(./tex/day_24.tex [43]
+[39] [40]) (./tex/day_22.tex [41] [42]) (./tex/day_23.tex [43])
+(./tex/day_24.tex [44]
 Overfull \hbox (22.19638pt too wide) in paragraph at lines 33--36
 []\T1/cmss/bx/n/10.95 Definition 21. []\T1/cmss/m/n/10.95 A set of points, $\OM
 S/cmss/m/n/10.95 f\OML/cmm/m/it/10.95 p[]; p[]; p[]; [] ; p[]\OMS/cmss/m/n/10.9
 5 g ^^R \U/msb/m/n/10.95 R[]$ \T1/cmss/m/n/10.95 is $[]$ or $[]$
  []
 
-[44]
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
@@ -973,7 +953,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
-[45]
+[46]
 Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
@@ -983,17 +963,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-[46]
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
-[47]
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
  []
 
-[48]
+[49]
 
 ! Package pgfkeys Error: I do not know the key '/tikz/fill color', to which you
  passed 'blue', and I am going to ignore it. Perhaps you misspelled it.
@@ -1146,7 +1126,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
  []
 
-) (./tex/day_25.tex [49]
+) (./tex/day_25.tex [50]
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
@@ -1187,7 +1167,7 @@ l.30                 \end{axis}
                                
 (That was another \errmessage.)
 
-[50]
+[51]
 
 ! Package pgfkeys Error: I do not know the key '/tikz/fill color', to which you
  passed 'blue', and I am going to ignore it. Perhaps you misspelled it.
@@ -1337,7 +1317,7 @@ l.85                 \end{axis}
                                
 (That was another \errmessage.)
 
-[51]
+[52]
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
@@ -1491,19 +1471,19 @@ l.118                 \end{axis}
                                 
 (That was another \errmessage.)
 
-[52] [53]) [54] (./notes.aux)
+[53] [54]) [55] (./notes.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 27459 strings out of 492616
- 678349 string characters out of 6135177
- 1000821 words of memory out of 5000000
- 30803 multiletter control sequences out of 15000+600000
+ 27512 strings out of 492616
+ 679293 string characters out of 6135177
+ 1192830 words of memory out of 5000000
+ 30860 multiletter control sequences out of 15000+600000
  20050 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,21n,108p,750b,2477s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,21n,108p,750b,2503s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -1521,10 +1501,10 @@ sfss0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></
 usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/share/texmf
 -dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/cm-super/sfsx1440.pfb>
-Output written on notes.pdf (54 pages, 502995 bytes).
+Output written on notes.pdf (55 pages, 451060 bytes).
 PDF statistics:
- 274 PDF objects out of 1000 (max. 8388607)
- 183 compressed objects within 2 object streams
+ 270 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

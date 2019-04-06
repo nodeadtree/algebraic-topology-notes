@@ -23,12 +23,56 @@
                     $(f*g)*h$ by making f take less and less time and h take more and more time.\\
             \begin{minipage}[c]{\linewidth}
                 \begin{center}
-                \includegraphics[]{images/association.png}
+                    \begin{tikzpicture}
+                        \begin{axis}[
+                            width=\linewidth, height=8cm,
+                            ticks=none,
+                            ymin=-1,ymax=1
+                            ]
+                            \draw (20,170) node {$(\textcolor{blue}{f}*\textcolor{green}{g})*\textcolor{red}{h}$};
+                            \addplot [samples=200, domain=0:1,color=blue] {-.25*cos(deg(6.28*x))}
+                            node [pos=.5,below,yshift=-5mm] {$f$};
+                            \draw [decorate,decoration={brace,amplitude=20pt, mirror},color=blue] (0,65) -- (100,65)
+                            node [pos=.5, below, yshift=-8mm, color=blue] {$0\leq s \leq\frac{1}{4}$};
+
+                            \addplot [samples=200, domain=1:2,color=green] {-.25*cos(deg(6.28*x))}
+                            node [pos=.5,below,yshift=-5mm] {$g$};
+                            \draw [decorate,decoration={brace,amplitude=20pt, mirror},color=green] (100,65) -- (200,65)
+                            node [pos=.5, below, yshift=-8mm, color=green] {$\frac{1}{4}\leq s \leq\frac{1}{2}$};
+
+                            \addplot [samples=200, domain=2:3,color=red] {-.25*cos(deg(6.28*x))}
+                            node [pos=.5,below,yshift=-5mm] {$h$};
+                            \draw [decorate,decoration={brace,amplitude=20pt, mirror},color=red] (200,65) -- (300,65)
+                            node [pos=.5, below, yshift=-8mm, color=red] {$\frac{1}{2}\leq s \leq 1$};
+                        \end{axis}
+                    \end{tikzpicture}
                 \end{center}
             \end{minipage}\\
             \begin{minipage}[c]{\linewidth}
                 \begin{center}
-                \includegraphics[]{images/association_2.png}
+                    \begin{tikzpicture}
+                        \begin{axis}[
+                            width=\linewidth, height=8cm,
+                            ticks=none,
+                            ymin=-1,ymax=1
+                            ]
+                            \draw (20,170) node {$\textcolor{blue}{f}*(\textcolor{green}{g}*\textcolor{red}{h})$};
+                            \addplot [samples=200, domain=0:1,color=blue] {-.25*cos(deg(6.28*x))}
+                            node [pos=.5,below,yshift=-5mm] {$f$};
+                            \draw [decorate,decoration={brace,amplitude=20pt, mirror},color=blue] (0,65) -- (100,65)
+                            node [pos=.5, below, yshift=-8mm, color=blue] {$0\leq s \leq\frac{1}{2}$};
+
+                            \addplot [samples=200, domain=1:2,color=green] {-.25*cos(deg(6.28*x))}
+                            node [pos=.5,below,yshift=-5mm] {$g$};
+                            \draw [decorate,decoration={brace,amplitude=20pt, mirror},color=green] (100,65) -- (200,65)
+                            node [pos=.5, below, yshift=-8mm, color=green] {$\frac{1}{2}\leq s \leq\frac{3}{4}$};
+
+                            \addplot [samples=200, domain=2:3,color=red] {-.25*cos(deg(6.28*x))}
+                            node [pos=.5,below,yshift=-5mm] {$h$};
+                            \draw [decorate,decoration={brace,amplitude=20pt, mirror},color=red] (200,65) -- (300,65)
+                            node [pos=.5, below, yshift=-8mm, color=red] {$\frac{3}{4}\leq s \leq 1$};
+                        \end{axis}
+                    \end{tikzpicture}
                 \end{center}
             \end{minipage}
                 \item $*$ has left/right identities.\\
@@ -42,6 +86,11 @@
                     the time" sitting at either $x$ or $y$.\\
                     \begin{minipage}[c]{\linewidth}
                         \begin{center}
+                            \begin{tikzpicture}
+                                \begin{axis}
+
+                                \end{axis}
+                            \end{tikzpicture}
                             \includegraphics[]{images/path_identity.png}
                         \end{center}
                     \end{minipage}
