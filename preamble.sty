@@ -1,0 +1,107 @@
+%%\documentclass[11pt]{article}
+
+\usepackage{amsthm, amssymb,amsmath, listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{faktor}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usepackage[utf8]{inputenc}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\oddsidemargin 0pt
+\evensidemargin 0pt
+\marginparwidth 0pt
+\marginparsep 10pt
+\topmargin 0pt
+\headsep 20pt
+\textheight 9in
+\textwidth 6.5in
+%New command wasteland
+\newcommand{\ojo}[1]{{\sffamily\bfseries\boldmath[#1]}}
+
+\newcommand{\seq}[2]{#1_1#2_1,...,#1_n#2_n}
+\newcommand{\sumseq}[2]{#1_1#2_1+...+#1_n#2_n}
+\newcommand{\inpr}[1]{\langle #1 \rangle}
+\newcommand{\norm}[1]{\lvert #1 \rvert}
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Kilb}{\mathcal{K}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\nullspace}{\mathrm{null}}
+\newcommand{\rank}{\mathrm{rank}} 
+\newcommand{\compconj}[1]{ \overline{#1}}
+
+%Setting commands
+\newcommand{\name}{Juniper Overbeck}
+\newcommand{\ttle}{}
+
+\newcommand{\filled}[1]{
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}
+                \addplot+[fill,fill opacity=.3] coordinates 
+                {#1} --cycle;
+            \end{axis}
+        \end{tikzpicture}\\
+    \end{center}
+}
+\newcommand{\points}[1]{
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[nodes near coords]
+                \addplot+[only marks,
+                          point meta=explicit symbolic]
+                 coordinates {#1};
+            \end{axis}
+        \end{tikzpicture}\\
+    \end{center}
+}
+\newcommand{\pointsnl}[1]{
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}
+                \addplot[only marks]
+                 coordinates {#1};
+            \end{axis}
+        \end{tikzpicture}\\
+    \end{center}
+}
+
+
+
+%FancyHF stuff, capitalization brutalized.
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\ttle}
+\rhead{\name}
+\cfoot{}
+\fancypagestyle{plain}{ %
+	\fancyhf{}
+	\renewcommand{\headrule}{} % remove lines as well
+	\cfoot{}
+}
+
+
+
+\renewcommand\headrule{
+	\begin{minipage}{1\textwidth}
+        \begin{center}
+		\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt
+        \end{center}
+	\end{minipage}
+}
+
