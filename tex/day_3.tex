@@ -33,11 +33,34 @@
                 \end{cases}\\
             \end{align*}
         \end{definition}
-        \begin{minipage}[c]{\linewidth}
-            \begin{center}
-            \includegraphics[width=\linewidth]{images/concatenation.png}
-            \end{center}
-        \end{minipage}
+        \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[ticks=none]
+                \addplot[samples=200,domain=0:1,color=red,thick] {x^2}
+                node [below right, pos=.5,color=red] {$f(s),\ s\in [0,1]$};
+                \addplot[samples=200,domain=1:2,color=blue,thick] {2*x-1}
+                node [above left,pos=.5,color=blue] {$g(s),s\in [0,1]$};
+            \end{axis}
+        \end{tikzpicture}
+        \begin{tikzpicture}
+            \begin{axis}[ticks=none]
+                \addplot[samples=200,domain=0:1,color=magenta,thick] {x^2}
+                node [above left, pos=1,color=magenta] {$(f*g)(s),\ s\in [0,1]$};
+                \addplot[samples=200,domain=1:2,color=magenta,thick] {2*x-1};
+                \draw [decorate, decoration={brace,
+                                             amplitude=20pt,
+                                             raise=2pt,
+                                             mirror},color=cyan] (0,0) -- (100,100)
+                     node [below right, pos=.4,yshift=-4.5mm, color=cyan] {{$0\leq s\leq \frac{1}{2}$}};
+                \draw [decorate, decoration={brace,
+                                             amplitude=20pt,
+                                             raise=2pt,
+                                             mirror},
+                       color=orange] (102,102) -- (200,300)
+                node [below right, pos=.4,yshift=-4.5mm, color=orange] {{$0\leq s\leq \frac{1}{2}$}};
+            \end{axis}
+        \end{tikzpicture}
+        \end{center}
     \begin{itemize}
         \item Why is $f*g$ continuous?\\
         \begin{theorem}
@@ -47,23 +70,59 @@
                 A,B \subseteq X,\ &\text{closed subsets such that } X=A\cup B\\
                 Y &= \text{topological space}\\
             \end{align*}\\
-                \begin{minipage}[c]{\linewidth}
-                    \begin{center}
-                    \includegraphics[]{images/gluing_lemma_2.png}
-                    \end{center}
-                \end{minipage}
+            \begin{minipage}[c]{\linewidth}
+                \begin{center}
+                    \begin{tikzpicture}
+                        \draw [color=blue,thick] (2,3) circle(1.5cm);
+                        \draw[->] [color=blue](2,3) node [left] {$A$} -- (6,2.75)
+                        node [right]{$f(A)$};
+                        \draw[->] [color=red](2,.75) node [left] {$B$} -- (6,.75)
+                        node [right]{$f(B)$};
+                        \draw[->] [color=violet,thick](2.5,2) node [left] {$A\cap B$} --
+                        (5.3,1.75) node [right] {\small{$f(A\cap B)$}};
+                        \draw [color=red,thick] (2,1) circle(1.5cm);
+                        \draw [color=black,thick] (6,2) circle(2.5cm);
+                        \draw (7.8,2) node [color=black,thick] {$Y$};
+                        \draw [color=blue,thick] (6,2.5) circle(1.3cm);
+                        \draw [color=red,thick] (6,1) circle(1.3cm);
+                    \end{tikzpicture}
+                \end{center}\\
+            \end{minipage}\\ 
+            \vspace{.5cm}\\
             Let the following continuous functions be defined,
             \begin{align*}
                 f&:\ A \rightarrow Y\\
                 g&:\ B \rightarrow Y\\
             \end{align*}
             such that $f(x)=g(x)\ \forall x \in A\cap B$.\\
-                        \begin{minipage}[c]{\linewidth}
-                            \begin{center}
-                            \includegraphics[]{images/gluing_lemma.png}
-                            \end{center}
-                        \end{minipage}\\ 
-                    Then the function,\\
+            \vspace{.5cm}\\
+            \begin{minipage}[c]{\linewidth}
+                \begin{center}
+                    \begin{tikzpicture}
+                        \begin{axis}
+                            [width=\linewidth,
+                            height=5cm,
+                            ymin=-1,ymax=1,
+                            ticks=none]
+                            \addplot [samples=200,color=blue,domain=0:1.25] {
+                                .2*sin(deg(6.28*x))
+                            }node [pos=0,below left] {$x$}
+                            node [pos=.25,below] {$f(x)$}
+                            node [pos=1, below] {$y$};
+                            \addplot [samples=200,color=red,domain=.75:2] {
+                                .2*sin(deg(6.28*x))
+                            }node [pos=0,below] {$w$}
+                            node [pos=.75, above] {$g(x)$}
+                            node [pos=1, right] {$z$};
+                            \draw [color=violet,decorate,decoration={brace,amplitude=5pt}]
+                            (75,85) -- (120,130) node [above,pos=.5,yshift=3mm]
+                            {$f(x)=g(x)$};
+                        \end{axis};
+                    \end{tikzpicture}
+                \end{center}
+            \end{minipage}\\
+            \vspace{.5cm}\\
+            Then the function,\\
             \begin{align*}
                 h&:\ X\rightarrow Y\\
                 h(x)&=\begin{cases}

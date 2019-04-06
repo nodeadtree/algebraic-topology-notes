@@ -28,11 +28,23 @@
                 g(t)&=(\cos(\pi t),\sin(\pi t))\\
             \end{align*}
         \item To make precise, ``Deforming'' one path into another:\\
-            \begin{minipage}[c]{\linewidth}
-                \begin{center}
-                    \includegraphics[]{images/homotopy_class_2.png}
-                \end{center}
-            \end{minipage}\\
+            \begin{center}
+                \begin{tikzpicture}
+                    \begin{axis}[
+                        xmin=0,xmax=1,
+                        ymin=0,ymax=1
+                        ]
+                        \addplot [samples=200,color=blue, domain=0:1]{x}
+                        node [color=blue,pos=.5,above left] {$f(x)$};
+                        \addplot [samples=200,color=purple]{.8*x+.2*x^2};
+                        \addplot [samples=200,color=purple]{.6*x+.4*x^2};
+                        \addplot [samples=200,color=purple]{.4*x+.6*x^2};
+                        \addplot [samples=200,color=purple]{.2*x+.8*x^2};
+                        \addplot [samples=200,color=red, domain=0:1]{x^2}
+                        node [color=red,pos=.5,below right] {$g(x)$};
+                    \end{axis}
+                \end{tikzpicture}
+            \end{center}
     \end{itemize}
         \begin{definition}
             Let $f$ and $g$ be paths in $X$ from $p$ to $q$. A \underline{path homotopy} from $f$ to $g$ is a continuous function,
@@ -59,11 +71,30 @@
             \begin{align*}
                 h_t= \text{ path in $X$ from $p$ to $q$ }\\
             \end{align*}\\
-            \begin{minipage}[c]{\linewidth}
-                \begin{center}
-                \includegraphics[]{images/homotopy_class.png}
-                \end{center}
-            \end{minipage}
+            \begin{center}
+                \begin{tikzpicture}
+                    \begin{axis}[
+                            xmin=-.1,xmax=2.3,
+                            ymin=-.1,ymax=2.2
+                        ]
+                        \addplot [samples=200,color=teal,domain=0:2.263,thick]{
+                            sin(deg(2*x))+x
+                        }
+                        node [above left, pos=.5,color=teal,thick]{$h_0=f$};
+                        \addplot [samples=200,color=magenta,domain=0:2.263, thick]{
+                            .25*(sin(deg(2*x))+x)+.75*((x^2)/4)
+                        } node [below right, color=magenta,pos=.30] {$h_{\frac{3}{4}}$};
+                        \addplot [samples=200,color=violet,domain=0:2.263, thick]{
+                            .5*(sin(deg(2*x))+x)+.5*((x^2)/4)
+                        } node [below right, ,pos=.5, thick] {$h_\frac{1}{2}$};
+                        \addplot [samples=200,color=blue,domain=0:2.263, thick]{
+                            .75*(sin(deg(2*x))+x)+.25*((x^2)/4)
+                        } node [above left, color=blue,pos=.6] {$h_\frac{1}{4}$};
+                        \addplot [samples=200,color=orange,domain=0:2.263, thick]{(x^2)/4}
+                        node [below right, color=orange,pos=.5] {$h_1=g$};
+                    \end{axis}
+                \end{tikzpicture}
+            \end{center}
             This is continuous because $H$ is continuous, and it goes from $p$ to $q$, because $h_t(0)=H(0,t)=p$ and $h_t(1)=H(1,t)=q$.
             $h_0(s)=f$ because $h_0(s)=H(s,0)=f(s),\ \forall s$\\
             and $h_1(s)=g$ because $h_1(s)=H(s,1)=g(s),\ \forall s$\\
