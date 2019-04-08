@@ -1,0 +1,97 @@
+\documentclass[../notes.tex]{subfiles}
+\begin{document}
+\section{Day 26}
+\subsection{Simplicial Homology}
+\begin{itemize}
+    \item Let the following be so,
+        \begin{align*}
+            K=\text{Simplicial complex}\\
+            K_n=\{\text{ n-simplices of $K$ }\}\\
+            C_n(K)=\{\text{ n-chains }\\
+            =\{\text{$\Z$-linear combinations of n-simplices of $K$}\\
+        \end{align*}
+    \item Choose an ordering of the vertices, (0-simplices) of K,
+        \[
+            K_0=\{v_0,v_1,\dots,v_k\}
+        \]
+    \item Then,
+        \begin{align*}
+            \partial_n:C_n(K)\rightarrow C_{n-1}(K)\\
+            \partial_n(\underbrace{[v_{i_0},v_{i_1},\dots,v_{i_n}])}_{\text{
+                    n-simplex spanned by $v_{i_0},v_{i_1},\dots,v_{i_n}$}}
+                =
+            \sum_{j=0}^n(-1)^j[v_{i_0},v_{i_1},\dots,\hat{v}_{i_j}\dots,v_{i_n}])
+        \end{align*}
+        Where, $i_0\le_1\dots\le i_n$.
+\end{itemize}
+\begin{definition}
+    The \underline{simplicial chain complex} of $K$ is,
+    \[
+        \{0\}\rightarrow\dots \rightarrow^{\partial_3}C_2(k)
+        \rightarrow\dots \rightarrow^{\partial_2}C_1(k)
+        \rightarrow \rightarrow^{\partial_1}C_0(k)
+        \rightarrow \rightarrow \{0\}
+    \]
+    By convention,
+    \[
+        C_n(K)=\{0\}
+    \]
+    Whenever $K$ has no n-simplices.
+\end{definition}
+\begin{definition}
+    The \underline{$n^{\text{th}}$ simplicial homology group} of $K$ is,
+    \[
+        H_n(K)=\frac{ker(\partial_n)}{im(\partial_{n+1})}
+    \]
+\end{definition}
+\begin{itemize}
+    \item \underline{Note:} This quotient makes sense because,
+        \[
+            im(\partial_{n+1})\subseteq ker(\partial_n)
+        \]
+        or equivalently,
+        \[
+            \partial_n \circ \partiall_{n+1}=0
+        \]
+\end{itemize}
+\subsubsection{Worksheet stuff}
+\begin{enumerate}
+    \item Simplicial chain complex for worksheet
+        \[
+            \{0\}\rightarrow C_2(k)
+            \rightarrow^{\partial_2}C_1(k)
+            \rightarrow^{\partial_1}C_0(k)
+            \rightarrow \{0\}
+        \]
+    \item 
+        \begin{align*}
+            \partial_1(e_1) = \partial_1([v_1,v_2]) = v_2-v_1\\
+            \partial_1(e_2) = \partial_1([v_1,v_3]) = v_3-v_1\\
+            \partial_1(e_3) = \partial_1([v_2,v_3]) = v_3-v_2\\
+        \end{align*}
+    \item 
+        \begin{align*}
+            \partial_2([v_1,v_2,v_3])=[v_2,v_3]-[v_1,v_3]+[v_1,v_2]\\
+            \partial_2([v_1,v_2,v_3])=e_3-e_1+e_2
+        \end{align*}\\
+        \begin{center}
+            \begin{tikzpicture}
+                \draw[->] (0,0) node [below left] {$p_1$} --
+                          (0,6) node [above]{$p_2$} --
+                          (6,0) node [below right] {$p_3$} -- cycle;
+                          \draw (3,0) node [below] {$e_1$}\\
+                          \draw (0,3) node [left] {$e_2$}\\
+                          \draw (3,3) node [above right] {$e_3$}\\
+            \end{tikzpicture}
+        \end{center}
+    \item 
+        \begin{align*}
+            ker(\partial_2)=\{af_1| ker(af_1)=0\}
+        \end{align*}
+        Since $\partial_2(f_1)\neq 0$, the only multiple of $f_1$ sent to 0 is $0f_1$
+    \item
+        \[
+            ker(\partial_1)=\{ae_1-ae_2+ae_3|\ a\in \Z\}
+        \]
+\end{enumerate}
+\end{document}

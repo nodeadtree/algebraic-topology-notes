@@ -87,9 +87,9 @@
                     \begin{minipage}[c]{\linewidth}
                         \begin{center}
                             \begin{tikzpicture}
-                                \begin{axis}
-
-                                \end{axis}
+                                \draw [->][color=blue, thick] (0,0) node [color=red, above, yshift=3mm] {$e_x$}
+                                node [color=black, below, yshift=-1mm] {$x$} -- (3,3) node [color=black,below right]{$y$};
+                                \draw [decorate, decoraton={brace,amplitude=20pt,mirror},color=black] (0,0) -- (3,3);
                             \end{tikzpicture}
                             \includegraphics[]{images/path_identity.png}
                         \end{center}
