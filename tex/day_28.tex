@@ -1,0 +1,83 @@
+\documentclass[../notes.tex]{subfiles}
+\begin{document}
+\section{Day 27}
+\subsection{$\Delta$-complexes}
+\begin{definition}
+    Let $X$ be any topological space.
+    A \underline{$\Delta$-complex structure} on $X$ is a collection of sets:
+    \begin{align*}
+        S_0&=\{\sigma_1^0,\sigma_2^0,\dots,\sigma_{k_0}^0\\
+        S_1&=\{\sigma_1^1,\sigma_2^1,\dots,\sigma_{k_1}^1\\
+        S_2&=\{\sigma_1^2,\sigma_2^2,\dots,\sigma_{k_2}^2\\
+        \vdots&\\
+        S_n&=\{\sigma_1^n,\sigma_2^n,\dots,\sigma_{k_n}^n\\
+    \end{align*}
+    Where,
+    \[
+        \underbrace{\sigma_i^n:\Delta^n\rightarrow X}_{
+            \text{``$n$-simplex in $X$''}
+        }
+    \]
+    (note that $\Delta^n$ is the standard $n$-simplex)
+    and that the maps are continuous such that,
+    \begin{enumerate}
+        \item ``simplices are glued together only along their boundaries and they glue to form all of $X$''
+        \item ``a face of a simplex in $X$ is another simplex''
+        \item ``the topology on $X$ is compatible with the topologies on the simplices''
+    \end{enumerate}
+    \begin{itemize}
+        \item \underline{E.g.} In condition 3, we're excluding the possibility of forming
+            a set by gluing the simplices then giving that set the trivial topology. CHECK
+            IT OUT THER'S A DOODLING.
+    \end{itemize}
+    \end{definition}
+    \begin{itemize}
+        \item \underline{Ex:} $X=S^1$
+            \begin{align*}
+                S_0 &= \{\sigma_1^0,\sigma_2^0\}\\
+                \sigma_1^0&:\Delta^0\rightarrow X \text{ constant map at $(1,0)$ }\\
+                \sigma_2^0&:\Delta^0\rightarrow X \text{ constant map at $(-1,0)$ }\\
+                S_1 &= \{\sigma_1^1,\sigma_2^1\}\\
+                \sigma_1^1&:\Delta^1\rightarrow X\\
+                \sigma_2^1&:\Delta^1\rightarrow X\\
+                \sigma_1^1(t)&=(\cos(\pi t),\sin(\pi t))\\
+                \sigma_1^1(t)&=(\cos(\pi t),-\sin(\pi t))\\
+            \end{align*}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw (2,2) circle (2cm);
+                \draw (4,2) node[right] { $(1,0)$};
+                \draw (0,2) node[left] { $(-1,0)$};
+                \draw (4,2) node {$\circ$};
+                \draw (0,2) node {$\circ$};
+                \draw (2,4) node {$<$};
+                \draw (2,0) node {$>$};
+            \end{tikzpicture}
+        \end{center}
+    \item \underline{Ex:} $X=S^1$
+        \begin{align*}
+            S_0 &= \{\sigma_1^0\} \text{ ( constant map at $(1,0)$ ) }\\
+            S_1 &= \{\sigma_1^1\}\\
+            \sigma_1^1&:\Delta^1 \rightarrow X\\
+            \sigma_1^1(t)&=(\cos(2\pi t),\sin(2\pi t))
+        \end{align*}
+        \begin{center}
+            \begin{tikzpicture}
+                \draw (2,2) circle (2cm);
+                \draw (2,4) node {$<$};
+                \draw (4,2) node[right] { $(1,0)$};
+                \draw (4,2) node{$\circ$};
+            \end{tikzpicture}
+        \end{center}
+    \item \underline{Ex:} $X=$ torus
+        \begin{align*}
+            &S_0 = \{\sigma_1^0\}\\
+            &\underbrace{S_1 = \{\sigma_1^1,\sigma_2^1,\sigma_3^1\}}_{\text{
+                map to $e_1,e_2,e_3$ respectively in the direction shown
+                }
+            }\\
+            &S_2= \{\sigma_1^2,\sigma_2^2\}
+        \end{align*}
+        Fuckin lost me brah
+    \end{itemize}
+\end{document}
