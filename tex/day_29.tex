@@ -1,0 +1,135 @@
+\documentclass[../notes.tex]{subfiles}
+\begin{document}
+\section{Day 29}
+\begin{itemize}
+    \item \underline{So far:} Defined $H_n^{\Delta}(X)$, the simplicial homology of a space
+        $X$ with a $\Delta$-complex structure
+    \item \underline{Issues:}
+        \begin{itemize}
+            \item Does it depend on the $\Delta$-complex structure?
+            \item $X\cong_{homeo}Y\implies H_n^{\Delta}(X)\cong H_n^{\Delta}(Y)$?
+            \item Does $f:X\rightarrow Y$ induce $f_*:H_n^{\Delta}(X)\rightarrow H_n^{\Delta}(Y)$?
+        \end{itemize}
+        To resolve these issues, we'll replace simplicial homology with a (seemingly much larger), version
+        of homology.
+\end{itemize}
+\subsection{Singular Homology}
+Let the following be so,
+\begin{align*}
+    X=\text{ any topological space }\\
+    \Delta^n=\text{ standard $n$-simplex }\subseteq \R^{n+1}\\
+\end{align*}
+\begin{definition}
+    \begin{align*}
+        S_n(X)=\{\text{continuous maps from $\sigma:\Delta^n\rightarrow X$}\}\\
+    \end{align*}
+    Note that, $S_n(X)$ is absurdly huge and that our continuous maps can be 
+    singularly horrible.
+    \[
+        C_n(X)=\{a_1\sigma_1+\dots+a_r\sigma_r|\ a_1,\dots,a_r\in \Z,\ \sigma_1,\dots,\sigma_r\in S_n(X)\}
+    \]
+    Note that this is equivalent to a product of uncountably many copies of $\Z$
+    We call $C_n(X)$ the group of \underline{singular $n$-chains}
+\end{definition}
+\begin{definition}
+    The (singular) \underline{boundary homomorphisms} are:
+    \begin{align*}
+        \partial_n:C_n(X)\rightarrow C_{n-1}(X)\\
+        \partial_n(\sigma)=\sum_{j=0}^n(-1)^{j}(\sigma\circ  f_j)\\
+    \end{align*}
+\end{definition}
+\begin{definition}
+    The \underline{singular homology} of $X$ is,
+    \begin{align*}
+        \frac{ker(\partial_n)}{im(\partial_{n+1})}
+    \end{align*}
+\end{definition}
+\begin{itemize}
+    \item \underline{Note:} The ``same'' proof for simplicial homology shows,
+        \[
+            \partial_n\circ\partial_{n+1}=0
+        \]
+        This $\implies$
+        \[
+            im(\partial_n+1)\subseteq ker(\partial_n)
+        \]
+        So, the definition of $H_n(x)$ makes sense.
+    \item So, what's craaaazy about this definition,
+        \[
+            H_n(X)=\frac{\Z^{\text{uncountable}}}{\Z^{\text{uncountable}}}
+        \]
+        but crazily:
+\end{itemize}
+\begin{theorem}
+    \[
+        H_n(X)\cong H_n^{\Delta}(X)
+    \]
+    for any $\Delta$-complex structure on $X$
+\end{theorem}
+\begin{itemize}
+    \item We won't prove this theorem, but we'll see some examples.
+    \item \underline{Note:} This theorem implies that $H_n^{\Delta}(X)$
+        is independent of the $\Delta$-complex structure you choose. Look
+        into relative homology to show some of this I guess? Read chapter 2 of Hatcher
+        "The equivalence of simplicial and singular homology"
+    \item \underline{Note:} This theorem implies that $H_n^{\Delta} (X)$ is
+        independent of the $\Delta$-complex structure you choose.
+\end{itemize}
+\subsection{Induced Homomorphisms}
+\begin{itemize}
+    \item
+        Let $f:X\rightarrow Y$ be continuous
+    \item Then $f$ induces a homomorphism,
+        \begin{align*}
+            f_{\#}&:C_n(X)\rightarrow C_n(Y)\\
+            a_1\sigma_1&+\dots a_r\sigma_r\in C_n(X),\ \text{etc.}\\
+            f_{\#}(a_1\sigma_1+\dots+a_r\sigma_r)&=
+            a_1(f\circ \sigma_1)+\dots+a_r(f\circ \sigma_r)\\
+        \end{align*}
+        With $\sigma_i$ and $f\circ \sigma_i$ are maps,
+        \begin{align*}
+            \sigma_i:\Delta^n\rightarrow X\\
+            f\circ\sigma_i:\Delta^n\rightarrow Y\\
+        \end{align*}
+        To check that this induces a homomorphism,
+        \[
+            f_*:H_n(X)\rightarrow H_n(Y)
+        \]
+        With,
+        \begin{align*}
+            H_n(X)=\frac{ker(\partial_n^X)}{im(\partial_{n+1}^X)}\\
+            H_n(Y)=\frac{ker(\partial_n^Y)}{im(\partial_{n+1}^Y)}\\
+        \end{align*}
+        we'll need to check the fact that $f_{\#}$ takes $ker(\partial_n^X)$ to
+        $\partial_n^Y$ and $im(\partial_{n+1}^X)$ to $im(\partial_{n+1}^Y)$
+    \item These both follow from:
+\end{itemize}
+\begin{lemma}
+    Let,
+    \begin{align*}
+        \partial_n^X:C_n(X)\rightarrow C_{n-1}(X)\\
+        \partial_n^Y:C_n(Y)\rightarrow C_{n-1}(Y)\\
+    \end{align*}
+    be the boundary homomorphisms, then,
+    \[
+        \partial_n^Y\circ f_{\#}=f_{\#}\circ\partial_n^X
+    \]
+\end{lemma}
+\begin{proof}
+    Suffices to prove on $n$-simplices $\sigma$:
+    \begin{align*}
+        (\partial_n^Y\circ f_{\#})(\sigma)&=\partial_n^Y(f\circ \sigma)\\
+        &=\sum_{j=0}^n(-i)^j(f\circ \sigma)\circ f_j\\
+        &=\sum_{j=0}^n(-i)^jf\circ(\sigma\circ f_j)\\
+        &=f_{\#}(\sum_{j=0}^n(-i)^j(\sigma\circ f_j))\\
+        &=f_{\#}(\partial_n^X(\sigma))
+    \end{align*}
+\end{proof}
+\begin{itemize}
+    \item We'll show next time that,
+        \begin{align*}
+            f_*&:H_n(X)\rightarrow H_n(Y)\\
+            f_*([a_1\sigma_1+\dots+a_r\sigma_r])&=[f_{\#}(a_1\sigma_1+\dots+a_r\sigma_r)]\\
+        \end{align*}
+\end{itemize}
+\end{document}
