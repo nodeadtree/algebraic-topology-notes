@@ -1,0 +1,133 @@
+\documentclass[../notes.tex]{subfiles}
+\begin{document}
+\section{Day 30}
+\subsection{Singular Homology, continued}
+\begin{itemize}
+    \item \underline{Recall:} A continuous map $f:X\rightarrow Y$ induces
+        \begin{itemize}
+            \item 
+                \[
+                    f_{\#}: C_n(X)\rightarrow C_n(Y)
+                \]
+                such that
+                \[
+                    \partial_n^Y\circ f_{\#}=f_{\#}\circ \partial_n^X
+                \]
+            \item 
+                \begin{align*}
+                f_{*}&:H_n(X)\rightarrow H_n(Y)\\
+                f_*([\underbrace{a_1\sigma_1,\dots,a_r\sigma_r}_{\alpha}])
+                &=[f_{\#}([a_1\sigma_1,\dots,a_r\sigma_r])]\\
+                \end{align*}
+        \end{itemize}
+        With sigma as the ``simplex in $X$''
+        \[
+            \sigma_n:\Delta^n\rightarrow X
+        \]
+    \item \underline{Questions/excercises:}
+        \begin{enumerate}
+            \item Prove that:
+                \[
+                    \alpha\in ker(\partial_n^X)\implies f_{\#}(\alpha)
+                    \in \ker(\partial_n^Y)
+                \]
+            \item Prove that:
+                \[
+                    \alpha\in im(\partial_{n+1}^X)\implies f_{\#}(\alpha)
+                    \in \im(\partial_{n+1}^Y)
+                \]
+            \item Convince yourself that points 1 and 2 imply that $f_{*}$ is
+                well defined
+        \end{enumerate}
+    \item \underline{Answers:}
+        \begin{enumerate}
+            \item 
+                \begin{align*}
+                    \alpha\in ker(\partial_n^X)&\implies \partial_n^{X}=0\\
+                    &\implies \partial_n^{Y}(f_{\#})(\alpha))=f_{\#}(\partial_n^X(\alpha))
+                    =f_{\#}(0)=0\\
+                    &\implies f_{\#}(\alpha)\in ker(\partial_n^Y)\\
+                \end{align*}
+            \item
+                \begin{align*}
+                    \alpha \in im(\partial_{n+1}^X)&\implies
+                    \alpha=\partial_{n+1}^X,\ \text{for some $\beta$}\\
+                    &\implies f_{\#}(\alpha)=f_{\#}(\partial_{n+1}(\beta))\\
+                    &\implies f_{\#}(\alpha)\in\im(\partial_{n+1}^Y)\\
+                \end{align*}
+            \item
+                \[
+                    f_{*}:\frac{ker(\partial_n^X)}{im(\partial_{n+1}^X)}
+                    \rightarrow \frac{ker(\partial_n^X)}{im(\partial_{n+1}^X)}
+                \]
+                Answer one implies that the numerator maps to the numerator.\\
+                Answer two implies that the image of $0$ is $0$.\\
+                Both of these together imply that $f_{*}$ is well defined.
+        \end{enumerate}
+    \item \underline{Facts:}
+        \begin{enumerate}
+            \item $(id_X)=id_{H_n(X)}$
+            \item $(f\circ g)=f_{*}\circ g_{*}$
+        \end{enumerate}
+        With these, it follows that we can use the same proof that we used for $\pi_1$
+\end{itemize}
+\begin{theorem}
+    If $X$ is homeomorphic to $Y$, then $H_n(X)\cong H_n(Y),\ \forall n$
+\end{theorem}
+\begin{itemize}
+    \item How can we possibly ever compute $H_n(X)$?
+    \item Lets start small: $H_0(X)$ for any $X$ and $H_n(\cdot)$ for any $n$
+    \item \underline{Proposition:} If $X$ is path-connected, then $H_0(X)\cong \Z$
+\end{itemize}
+\begin{proof}
+    Define
+    \begin{align*}
+        \phi&: H_0(X)\rightarrow \Z\\
+        H_0(X)&=\frac{ker(\partial_0)}{im(\partial_1)}=\frac{C_0(X))}{im(\partial_1)}\\
+        \phi([a_1\sigma_1+\dots+a_r\sigma_r])&=a_1+\dots+a_r\\
+    \end{align*}
+    This is a homomorphism and is
+    \begin{itemize}
+        \item \underline{Well-Defined:}
+            (i.e.if $a_1\sigma_1+\dots+a_r\sigma_r\in im(\partial_1)$, then
+            $a_1+\dots+a_r=0$)\\
+            For any 1-simplex, $\tau:\Delta^{1}\rightarrow X$,
+            \begin{align*}
+                \partial_1(\tau)&=\sum_{j=0}^1(-1)^j(\tau\circ f_j)\\
+                &=\underbrace{1(\tau\circ f_0)}_{\text{a 0-simplex in $X$}}
+                +\underbrace{(-1)(\tau\circ f_0)}_{\text{a 0-simplex in $X$}}\\
+                &\implies \text{ sum of coefficients in $\partial_1(\tau)$ is $1+(-1)=0$ }
+            \end{align*}
+            This implies that the sum of the coefficients in $\partial_1(\text{anything})=0$.
+            This is one of the things we wanted.
+        \item \underline{Injective:} suppose,
+            \begin{align*}
+                \phi([a_1\sigma_1+\dots+a_r\sigma_r])=0
+                \implies a_1+\dots+a_r=0
+            \end{align*}
+            implies that by allowing repeats I can assume that every $a_i$ is
+            either 1 or -1, and since the sum is 0,
+            \[
+                \#\{a_i=1\}=\#\{a_i=-1\}
+            \]
+            This implies that,
+            \[
+                [a_1\sigma_1+\dots+\a_r\sigma_r]=
+                \underbrace{[\sigma_1-\sigma_2+\dots+\sigma_{r-1}-\sigma_r]}_{
+                    \text{(may require some relabelling)}
+                }
+            \]
+            But each $\sigma_i:\Delta^0\rightarrow X$ is a constant map
+            to some point $x_i\in X$. Choose paths
+            \begin{align*}
+                x_1\rightarrow x_2\\
+                x_3\rightarrow x_4\\
+            \end{align*}
+            These are 1-simplices whose boundaries are 
+            $\sigma_2-\sigma_1,\sigma_4-\sigma_3, \dots$ which implies,
+            \[
+                [\sigma_2-\sigma_1+\sigma_4-\sigma_3+\dots]=[0]
+            \]
+    \end{itemize}
+\end{proof}
+\end{document}

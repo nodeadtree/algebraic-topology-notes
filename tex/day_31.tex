@@ -1,0 +1,162 @@
+\documentclass[../notes.tex]{subfiles}
+\begin{document}
+\section{Day 31}
+\subsection{Last time}
+\begin{itemize}
+    \item Proving,
+        \begin{align*}
+            \phi: H_0(X)\rightarrow \Z\\
+            \phi([\alpha])=\text{ sum of coefficients in $\alpha$ }\\
+        \end{align*}
+        is an isomorphism when $X$ is path-connected
+    \item \underline{Injectivity:} Suppose
+        \begin{align*}
+            \phi([\alpha])=0\\
+            \Rightarrow \text{Sum of coefficients in $\alpha$}=0\\
+            \Rightarrow [\alpha]=[\sigma_1-\sigma_2, \sigma_3-\sigma_4,\dots,
+                                  \sigma_{r-1}-\sigma_r]\\
+        \end{align*}
+        E.g. if
+        \begin{align*}
+            \alpha=3\sigma_1-2\sigma_2-\sigma_3\\
+            =\sigma_1+\sigma_1+\sigma_1-\sigma_2-\sigma_2-\sigma_3\\
+            =\sigma_1-\sigma_2+\sigma_1-\sigma_2+\sigma_1-\sigma_3\\
+        \end{align*}
+        Each $\sigma_i:\Delta^0\rightarrow X$ is a constant map from $\Delta^0$ to
+        a single point, $x_i\in X$. Choose a path $\delta_i:I\rightarrow X$ from
+        $x_{i+1}$ to $x_i$. This is a 1-simplex in $X$, namely,
+        \begin{align*}
+            \tau_i:\Delta^1\rightarrow X\\
+            \tau_i(1-t,t)=\delta_i(t)\\
+        \end{align*}
+        Then,
+        \begin{align*}
+            \partial_1(\tau_i)=\tau_i\circ f_0-\tau_i\circ f_1\\
+            =\underbrace{{\tau_i}_{|t=1}}_{\text{constant map at $x_i$}}-
+            \underbrace{{\tau_i}_{|t=1}}_{\text{constant map at $x_{i+1}$}}\\
+            =\sigma_i-\sigma_{i+1}
+        \end{align*}
+        Thus,
+        \begin{align*}
+            [\alpha]=[
+            \underbrace{\sigma_1-\sigma_2}_{\partial_1(\tau_1}+
+            \underbrace{\sigma_3-\sigma_4}_{\partial_1(\tau_2}+
+            \dots+
+            \underbrace{\sigma_{r-1}-\sigma_r}_{\partial_1(\tau_{t-1}})]\\
+            =[\partial_1(\tau_1+\dots+\tau_{t-1})]\\
+        \end{align*}
+    \item \underline{Surjectivity:} For any $a\in \Z$,
+        \[
+            \phi([a\cdot\text{any $\sigma$-simplex}])=a
+        \]
+    \item \underbrace{Pictorially:} 
+        \begin{center}
+            \LARGE{SOME GODDAMN PICTURE I CAN'T MAKE YET AHH FUCK}
+        \end{center}
+        \begin{align*}
+            H_0(X)&=\frac{C_0(X)}{im(\partial_1)}\\
+            \partial_1(\tau)&=w-v\\
+            &\implies w-v\in im(\partial_1)\\
+            &\implies [w]=[v]\in H_0(X)\\
+            &\implies \text{every generator of $C_0$ equals every other}
+        \end{align*}
+\end{itemize}
+\begin{theorem}
+    Suppose,
+    \[
+        X=X_1\sqcup X_2 \sqcup \dots \sqcup X_k\\
+    \]
+    Where $X_1,\dots,X_k$ are path-connected (``path components of X''). Then,
+    \[
+        H_n(X)\cong H_n(X_1)\oplus H_n(X_2)\oplus\dots\oplus H_n(X_k),\ \forall n\geq 0
+    \]
+\end{theorem}
+\begin{corollary}
+    \[
+        H_0(X)\cong \Z^{\text{$\#$ number of path components}}
+    \]
+\end{corollary}
+\begin{proof}
+    For simplicity, let,
+    \[
+        X=X_1\sqcup X_2
+    \]
+    First, claim
+    \[
+        C_n(X)\cong C_n(X_1)\oplus C_n(X_2)
+    \]
+    To see this, let:
+    \begin{align*}
+        \phi: C_n(X)\cong C_n(X_1)\oplus C_n(X_2)\rightarrow C_n(X)\\
+        \phi(\alpha_1,\alpha_2)=(i_1)_{\#}\alpha_1+(i_2)_{\#}\alpha_2\\
+    \end{align*}
+    Where $i_1:X_1\rightarrow X$ and $i_2:X_2\rightarrow X$ are the inclusions.
+    Note that $\alpha_1$ and $\alpha_2$ are linear combinations of simplices in their 
+    respective components.\\
+    This is
+    \begin{itemize}
+        \item Injective, because the images of $(i_1)_{\#}(\alpha_1)$ and
+            $(i_2)_{\#}(\alpha_2)$ are disjoint, so no cancellation can occur.
+        \item Surjective, because if,
+            \[
+                \alpha=a_1\sigma_1+\dots+\a_k\alpha_r\in C_n(X)
+            \]
+            $\implies$ each $\sigma_i$ must land entirely in either $X_1$ or $X_2$,
+            (Because $\sigma_i:\Delta^n\rightarrow X$ is continuous and $\Delta^n$ is
+            path-connected)\\
+            \begin{align*}
+                \implies& \alpha=(i_1)_{\#}(\text{stuff in $X_1$})+(i_2)_{\#}(\text{stuff in $X_2$})\\
+                \implies& \alpha\in im(\phi)\\
+            \end{align*}
+    \end{itemize}
+    Thus, $C_n(X)\cong C_n(X_1)\oplus C_n(X_2)$. And $\partial_n$ respects this
+    decomposition:\\
+    \begin{center}
+        \begin{tikzcd}
+            C_n(X)\arrow[r, "\partial_n"]& C_{n-1}(X)\\
+            C_n(X_1)\arrow[r,"\partial_n^1"]&C_{n-1}(X_1)\\
+            C_n(X_2)\arrow[r,"\partial_n^2"]&C_{n-1}(X_2)\\
+        \end{tikzcd}
+    \end{center}
+    \begin{align*}
+        C_n(X)\cong C_n(X_1)\oplus C_n(X_2)\\
+        C_{n-1}(X)\cong C_{n-1}(X_1)\oplus C_{n-1}(X_2)
+    \end{align*}
+    Thus,
+    \begin{align*}
+        H_n(X)=\frac{ker(\partial_n)}{im(\partial_{n+1})}
+        =\frac{ker(\partial_n^1)\oplus ker(\partial_n^2)}{
+            im(\partial_{n+1}^1)\oplus im(\partial_{n+1}^2)
+        }
+    \end{align*}
+\end{proof}
+\begin{itemize}
+    \item The last homology we can compute by force is:
+\end{itemize}
+\begin{theorem}
+    Let $X=\{\cdot\}$. Then,
+    \[
+        H_n(X)=\{0\}
+    \]
+    for all $n\gt 0$
+\end{theorem}
+\begin{proof}
+    For any $n$ there's only one possible $n$-simplec,
+    \begin{align*}
+        \sigma^n:\Delta^n\rightarrow X\\
+        \sigma^n=\text{ constant map }
+    \end{align*}
+    Thus,
+    \[
+        C_n(X)=\{a\cdot \sigma^n|\ a\in \Z\}\cong \Z
+    \]
+    The boundary maps are,
+    \begin{align*}
+        \partial_n: C_n(X)\rightarrow C_{n-1}\\
+        \partial_n(\sigma^n)=\sum_{j=0}^n(-1)^j)(\underbrace{\sigma^n\circ f_j}_{
+            (n-1)\text{-simplices, so must $=\sigma^{n-1}$}
+        })\\
+        =\sigma^{n-1} -\sigma^{n-1} +\sigma^{n-1} -\sigma^{n-1} \dots +(-1)^n\sigma^{n-1}\\
+    \end{align*}
+\end{proof}
+\end{document}

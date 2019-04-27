@@ -1,0 +1,186 @@
+\documentclass[../notes.tex]{subfiles}
+\begin{document}
+\section{Day 32}
+\subsection{Singular Homology Goals}
+\begin{itemize}
+    \item (Eventually) version of the Van Kampen theorem,
+    \item Prove that if $X\simeq Y$(homotopy equivalent), then
+        $H_n(X)\cong H_n(Y),\ \forall n$
+\end{itemize}
+\subsection{Homological Algebra}
+\begin{definition}
+    A \underline{chain complex} is a collection of abelian groups.
+    \[
+        \dots,C_2,C_1,C_0,C_{-1},C_{-2},\dots
+    \]
+    and group homomorphisms
+    \[
+        \partial_n:C_n\rightarrow C_{n-1}\\
+    \]
+    Such that
+    \[
+        \partial_{n-1}\circ\partial_n=0
+    \]
+    \begin{center}
+        \begin{tikzcd}
+            C_{\cdot}=(\dots \arrow[r, "\partial_3"] &
+            C_2 \arrow[r, "\partial_2"] &
+            C_1 \arrow[r, "\partial_1"] &
+            C_0 \arrow[r, "\partial_0"] &
+            C_{-1} \arrow[r, "\partial_{-1}"] &
+            C_{-2} \arrow[r, "\partial_{-2}"] &
+            \dots)
+        \end{tikzcd}
+    \end{center}
+\end{definition}
+\begin{itemize}
+    \item \underline{Main Example:}\\
+        \begin{align*}
+            C_n&=C_n(X)\\
+            &=\{\text{$\Z$-linear combinations of n-simplices in $X$}\}\\
+            &\text{or}\\
+            C_n&=C_n^{\Delta}(X)\\
+            &=\{\underbrace{\text{$\Z$-linear combinations of the $n$-simplices in $S_n$}}_{
+                \text{(particular $\Delta$-complex str)}
+            }\}\\
+            &\text{or}\\
+            C_n&=C_n(K),\ \text{Where $K$ is a simplicial complex}\\
+        \end{align*}
+\end{itemize}
+\begin{definition}
+    If $C_{\cdot}$ is any chain complex, it's \underline{$n^{\text{th}}$-homology group} is
+    \[
+        H_n(C_{\cdot}):=\frac{ker(\partial_n)}{im(\partial_{n+1})}
+    \]
+\end{definition}
+\begin{itemize}
+    \item \underline{Note:} This makes sense because $im(\partial_{n+1})\subseteq ker
+        (\partial_n)$, which follos from $\partial_n\circ\partial_{n+1}=0$.
+\end{itemize}
+\begin{definition}
+    If $C_{\cdot}$ and $D_{\cdot}$ are chain compexes, then a \underline{chain map} from
+    $C_{\cdot}$ to $C_{\cdot}$ to $D_{\cdot}$ is a collection of homomorphisms
+    \[
+        f_n:C_n\rightarrow D_n
+    \]
+    Such that,
+    \[
+        \partial_n^D\circ f_n=f_{n-1}\circ\partial_n^C,\ \forall n\in \Z
+    \]
+    \newpage
+    Graphically,
+    \begin{center}
+        \begin{tikzcd}
+                \dots \arrow[r, "\partial_3"] &
+                D_2 \arrow[r, "\partial_2"] \arrow[d, "f_2"]&
+                D_1 \arrow[r, "\partial_1"] \arrow[d, "f_1"]&
+                D_0 \arrow[r, "\partial_0"] \arrow[d, "f_0"]&
+                D_{-1} \arrow[r, "\partial_{-1}"] \arrow[d, "f_{-1}"]&
+                D_{-2} \arrow[r, "\partial_{-2}"] \arrow[d, "f_{-2}"]&\dots\\
+                \dots \arrow[r, "\partial_3"] &
+                C_2 \arrow[r, "\partial_2"] &
+                C_1 \arrow[r, "\partial_1"] &
+                C_0 \arrow[r, "\partial_0"] &
+                C_{-1} \arrow[r, "\partial_{-1}"] &
+                C_{-2} \arrow[r, "\partial_{-2}"] &\dots
+        \end{tikzcd}
+    \end{center}
+    Such that this commutes.
+\end{definition}
+\begin{itemize}
+    \item If $X$ and $Y$ are topological spaces and $g:X\rightarrow Y$ is a continuous
+        function, then
+        \begin{align*}
+            g_{\#}&:C_n(X)\rightarrow C_n(Y)\\
+            g_{\#}(\alpha_1\sigma_1+\dots+\alpha_r\sigma_r)&=
+            a_1(g\circ\sigma_1)+\cdots a_r(g\circ\sigma_r)\\
+        \end{align*}
+        is a chain map because we checked $\partial_n^Y\circ g_{\#}=g_{\#}\circ\partial_n^X$
+    \item \underline{Exercise:} If $f_{\cdot}:C_{\cdot}\rightarrow D_{\cdot}$ is any
+        chain map, then
+        \begin{align*}
+            f_*:H_n(C_{\cdot})\rightarrow H_n(D_{\cdot})\\
+            H_n(C_{\cdot})=\frac{ker(\partial_n^C)}{im(\partial_{n+1}^C)}\\
+            H_n(D_{\cdot})=\frac{ker(\partial_n^D)}{im(\partial_{n+1}^D)}\\
+            f_{*}([\alpha])=[f_n(\alpha)]\\
+        \end{align*}
+        Where,
+        \begin{align*}
+            \alpha \in ker(\partial_n^C)\subseteq C_n\\
+            f_n(\alpha)\in D_n\\
+        \end{align*}
+        is well defined. (Proof is exactly what we did to show that 
+        $g_{*}:H_n(X)\rightarrow H_n(Y)$ is well defined
+    \item \underline{Question:} When do two different chain maps,
+        \begin{align*}
+            f_{\cdot}:C_{\cdot}\rightarrow D_{\cdot}\\
+            g_{\cdot}:C_{\cdot}\rightarrow D_{\cdot}\\
+        \end{align*}
+        induce the \underline{same} homomorphism
+        \[
+            f_{*}=g_{*}:H_n(C_{\cdot})\rightarrow H_n(D_{\cdot})
+        \]
+        (\underline{Structurally:} if $X$ and $Y$ are homotopy equivalent, then there
+        exists
+        \begin{center}
+            \begin{tikzcd}
+                X \arrow[r, bend left=50, "f"]& Y\arrow[l, bend left=50, "g"]
+            \end{tikzcd}
+        \end{center}
+        such that $f \circ g\simeq id_Y$ and $g\circ f\simeq id_X$. For $\pi_1$ we 
+        ``showed'' $(f\circ g)_{*}=(id_Y)_*$ and $(g\circ f)_{*}=(id_X)_*$, thus
+        $f_{*}$ and $g_{*}$ were inverse isomorphisms.
+        \begin{center}
+            \begin{tikzcd}
+                \pi_1(X) \arrow[r, bend left=50, "f_*"]& \pi_1(Y)
+                \arrow[l, bend left=50, "g_*"]
+            \end{tikzcd}
+        \end{center}
+        To do this argument for $H_n$ instead of $\pi_1$ we'll need to know that homotopic 
+        maps between spaces induce the \underline{same} homomorphism on homology.)
+\end{itemize}
+\begin{definition}
+    A \underline{chain homotopy} $f_{\cdot}:C_{\cdot}\rightarrow D_{\cdot}$ to
+    $g_{\cdot}:C_{\cdot}\rightarrow D_{\cdot}$ is a collectopn of homomorphisms
+    \[
+        h_n:C_n\rightarrow D_{n+1},\ \forall n\in \Z
+    \]
+    such that
+    \[
+        \partial_{n+1}^D\circ h_n+h_n\circ \partial_{n+1}^C=f_n-g_n
+    \]
+    \begin{center}
+        \begin{tikzcd}
+                \dots \arrow[r, "\partial_3"] &
+                D_2 \arrow[r, "\partial_2"] \arrow[d, "f_2" description, bend right=20, color=orange]
+                    \arrow[d, "g_2" description, bend left=20, color=blue]&
+                D_1 \arrow[r, "\partial_1"] \arrow[d, "f_1" description, bend right=20, color=orange]
+                    \arrow[d, "g_1" description, bend left=20, color=blue]\arrow[dl, "h_1" description, color=violet]&
+                D_0 \arrow[r, "\partial_0"] \arrow[d, "f_0" description, bend right=20, color=orange]
+                \arrow[d, "g_0" description, bend left=20, color=blue]\arrow[dl, "h_0" description, color=violet]&\dots\\
+                \dots \arrow[r, "\partial_3"] &
+                C_2 \arrow[r, "\partial_2"] &
+                C_1 \arrow[r, "\partial_1"] &
+                C_0 \arrow[r, "\partial_0"] & \dots
+        \end{tikzcd}
+    \end{center}
+\end{definition}
+\begin{lemma}
+    If there exists a chain homotopy from $f_{\cdot}$ and $g_{\cdot}$ then $f_{*}=g_{*}$
+\end{lemma}
+\begin{proof}
+    Both $f_{*}$ and $g_{*}$ are homomorphisms,
+    \begin{align*}
+        H_n(C_{\cdot})\rightarrow H_n (D_{\cdot}) \\
+        H_n(C_{\cdot})=\frac{ker(\partial_n^C)}{im(\partial_{n+1}^C)}
+    \end{align*}
+    Let $[\alpha]\in H_n(C)$
+    \begin{align*}
+        f_{*}([\alpha])-g_{*}([\alpha])&=[f_n(\alpha)]-[g_n(\alpha)]\\
+        &=[f_n(\alpha)-g_n(\alpha)]\\
+        &=[\partial_{n+1}^D\circ h_n(\alpha)]+[h_{n-1}\circ\partial_n^C(\alpha)]\\
+        &=0
+    \end{align*}
+\end{proof}
+\end{document}
+
